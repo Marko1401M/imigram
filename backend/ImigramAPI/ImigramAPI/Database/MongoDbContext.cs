@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using ImigramAPI.Models;
+using MongoDB.Driver;
 
 namespace ImigramAPI.Database
 {
@@ -14,5 +15,6 @@ namespace ImigramAPI.Database
         }
 
         public IMongoDatabase Database => _database;
+        public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
     }
 }
