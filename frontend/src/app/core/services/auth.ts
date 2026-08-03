@@ -1,6 +1,7 @@
 import { Injectable, Service } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable, tap} from 'rxjs'
+import { form } from '@angular/forms/signals';
 @Injectable({
     providedIn: 'root'
 })
@@ -9,11 +10,16 @@ export class AuthService {
     constructor (private http: HttpClient){}
 
     login(username: string, password:string){
+  
         return this.http.post<any>(`${this.apiUrl}/login`,
         {
             username: username,
             password: password
         }
         ).pipe(tap(response =>{localStorage.setItem('token', response.token)}))
+    }
+
+    register(formData: FormData){
+        return this.http.post(`${this.apiUrl}/register`, formData)
     }
 }
