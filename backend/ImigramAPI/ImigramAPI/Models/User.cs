@@ -18,5 +18,6 @@ namespace ImigramAPI.Models
         public DateTime CreatedAt { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string Country { get; set; }
+        
     }
 }
