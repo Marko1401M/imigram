@@ -1,5 +1,5 @@
 ﻿using ImigramAPI.DTOs;
-using ImigramAPI.Interfaces;
+using ImigramAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,7 +1,7 @@
 ﻿using ImigramAPI.DTOs;
-using ImigramAPI.Interfaces;
 using ImigramAPI.Models;
-using ImigramAPI.Repositories;
+using ImigramAPI.Repositories.Interfaces;
+using ImigramAPI.Services.Interfaces;
 using MongoDB.Bson;
 
 namespace ImigramAPI.Services

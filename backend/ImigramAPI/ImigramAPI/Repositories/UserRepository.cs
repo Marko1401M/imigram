@@ -1,5 +1,6 @@
 ﻿using ImigramAPI.Database;
 using ImigramAPI.Models;
+using ImigramAPI.Repositories.Interfaces;
 using MongoDB.Driver;
 namespace ImigramAPI.Repositories
 {

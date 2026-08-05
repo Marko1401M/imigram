@@ -1,0 +1,28 @@
+<div class="create-post">
+
+    <textarea
+        [(ngModel)]="content"
+        placeholder="Napiši nešto..."
+    ></textarea>
+
+
+    <input
+        type="text"
+        [(ngModel)]="location"
+        placeholder="Lokacija"
+    >
+
+
+    <input
+        type="file"
+        multiple
+        accept="image/*,video/*"
+        (change)="onFileSelected($event)"
+    >
+
+
+    <button (click)="createPost()">
+        Objavi
+    </button>
+
+</div>

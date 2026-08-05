@@ -1,6 +1,4 @@
-﻿using System.Security;
-
-namespace ImigramAPI.DTOs
+﻿namespace ImigramAPI.DTOs
 {
     public class LoginResponseDto
     {

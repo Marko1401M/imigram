@@ -9,6 +9,14 @@ export class AuthService {
     private apiUrl = 'https://localhost:7109/api/Auth'
     constructor (private http: HttpClient){}
 
+    isLoggedIn() : boolean{
+        return !!localStorage.getItem("token");
+    }
+
+    logout(){
+        localStorage.removeItem("token");
+    }
+
     login(username: string, password:string){
   
         return this.http.post<any>(`${this.apiUrl}/login`,

@@ -1,6 +1,6 @@
 ﻿using ImigramAPI.Models;
 
-namespace ImigramAPI.Repositories
+namespace ImigramAPI.Repositories.Interfaces
 {
     public interface IUserRepository
     {

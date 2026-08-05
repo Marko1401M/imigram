@@ -1,6 +1,6 @@
 ﻿using ImigramAPI.Models;
 
-namespace ImigramAPI.Interfaces
+namespace ImigramAPI.Services.Interfaces
 {
     public interface IJwtService
     {

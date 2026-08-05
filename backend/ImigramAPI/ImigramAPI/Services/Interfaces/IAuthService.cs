@@ -1,6 +1,6 @@
 ﻿using ImigramAPI.DTOs;
 
-namespace ImigramAPI.Interfaces
+namespace ImigramAPI.Services.Interfaces
 {
     public interface IAuthService
     {
