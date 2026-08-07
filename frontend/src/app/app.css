@@ -1,0 +1,9 @@
+.main-content {
+    margin-left: 100px;
+    transition: margin-left .25s;
+    margin-top: 5px;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 230px;
+}
