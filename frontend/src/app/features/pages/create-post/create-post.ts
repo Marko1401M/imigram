@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { PostService } from '../../../core/services/post-service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-post',
   imports: [CommonModule, FormsModule],
@@ -16,7 +17,8 @@ export class CreatePost {
   selectedFiles: File[] = [];
 
   constructor(
-      private postService: PostService
+      private postService: PostService, 
+      private router: Router
   ){}
 
   onFileSelected(event: any){
@@ -49,6 +51,9 @@ export class CreatePost {
         .subscribe({
             next: res => {
                 console.log("Uspešno kreiran post");
+                console.log(res)
+                
+                this.router.navigate([`/post-details/`, res.id])
             },
             error: err => {
                 console.log(err);

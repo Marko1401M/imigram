@@ -1,0 +1,90 @@
+<div class="post-card">
+    <div class="post-header" (click)="showPost()">
+
+        <div class="user-info">
+
+            <img
+                src="https://localhost:7109{{post.profileImage}}"
+                class="avatar"
+                alt="avatar">
+
+            <div>
+
+                <h4>Ime Prezime</h4>
+
+                <span>
+                    {{ post.createdAt | date:'dd.MM.yyyy HH:mm' }}
+                </span>
+
+                <span
+                    *ngIf="post.location">
+
+                    • {{ post.location.name }}
+                </span>
+
+            </div>
+
+        </div>
+
+        <button class="menu-btn">
+            ⋮
+        </button>
+
+    </div>
+
+
+    <div
+        class="post-content"
+        *ngIf="post.content">
+
+        {{ post.content }}
+
+    </div>
+
+
+    <div class="media-container" *ngIf="post.media?.length"> 
+        
+        <button class="media-arrow left" *ngIf="post.media.length > 1" (click)="previousMedia()"> 
+
+        </button> 
+
+        <img *ngIf="post.media[currentMediaIndex].type === MediaType.Image" [src]="'https://localhost:7109' + post.media[currentMediaIndex].url" class="post-media"> 
+         
+        <video *ngIf="post.media[currentMediaIndex].type === MediaType.Video" controls class="post-media"> 
+            <source [src]="'https://localhost:7109' + post.media[currentMediaIndex].url"> 
+        </video> 
+        <button class="media-arrow right" *ngIf="post.media.length > 1" (click)="nextMedia()">  
+
+        </button> 
+    </div>
+
+
+    <div class="post-footer">
+
+        <div class="stats">
+
+            ❤️ {{ post.likesCount }}
+
+            <span>
+
+                💬 {{ post.commentsCount }}
+
+            </span>
+
+        </div>
+
+        <div class="actions">
+
+            <button style="width:100px" (click)="toggleLike()">
+                {{ post.isLiked ? '❤️' : '🤍' }}
+            </button>
+
+            <button>💬 Comment</button>
+
+            <button>↗ Share</button>
+
+        </div>
+
+    </div>
+
+</div>

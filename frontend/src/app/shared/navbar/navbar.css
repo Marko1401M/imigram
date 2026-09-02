@@ -14,65 +14,361 @@
     justify-content: center;
     gap: 12px;
 
-    transition: width .25s ease;
-    overflow: hidden;
+    transition: width 0.25s ease;
+
+    /* Bitno zbog dropdown-a */
+    overflow: visible;
+
+    /* Sidebar mora biti iznad contenta */
+    z-index: 9999;
 }
+
+
+/* Prošireni sidebar */
 
 .sidebar:hover {
     width: 220px;
 }
 
-.sidebar a {
+
+/* =========================
+   SIDEBAR ITEMS
+========================= */
+
+.sidebar a,
+.notification-button {
+    box-sizing: border-box;
+
     display: flex;
     align-items: center;
 
+    width: 100%;
     height: 55px;
+
     padding: 0 28px;
 
     color: #555;
     text-decoration: none;
 
-    transition: .2s;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
     white-space: nowrap;
+
+    transition: 0.2s;
 }
 
-.sidebar a i {
+
+/* =========================
+   ICONS
+========================= */
+
+.sidebar a mat-icon,
+.notification-button mat-icon {
+    width: 24px;
+    height: 24px;
+
+    font-size: 24px;
+
+    flex-shrink: 0;
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.sidebar a span,
+.notification-button > span:not(.notification-badge) {
+    margin-left: 20px;
+
+    opacity: 0;
+
+    transform: translateX(-10px);
+
+    transition: 0.2s;
+}
+
+
+/* Prikaži tekst kada je sidebar proširen */
+
+.sidebar:hover a span,
+.sidebar:hover .notification-button > span:not(.notification-badge) {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+/* =========================
+   HOVER
+========================= */
+
+.sidebar a:hover,
+.notification-button:hover {
+    background: #f5f5f5;
+}
+
+
+/* =========================
+   ACTIVE LINK
+========================= */
+
+.sidebar a.active {
+    color: #2196F3;
+
+    background: #EAF4FF;
+}
+
+
+/* =========================
+   NOTIFICATION WRAPPER
+========================= */
+
+.notification-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   NOTIFICATION BUTTON
+========================= */
+
+.notification-button {
+    justify-content: flex-start;
+}
+
+
+/* =========================
+   NOTIFICATION BADGE
+========================= */
+.notification-badge {
+    margin-left: auto;
+
+    min-width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e53935;
+    color: white;
+
+    font-size: 12px !important;
+    font-weight: bold;
+
+    opacity: 1 !important;
+    transform: none !important;
+
+    transition: 0.25s ease;
+}
+
+.sidebar:not(:hover) .notification-badge {
+    position: absolute;
+
+    left: 42px;
+    top: 5px;
+
+    margin-left: 0;
+}
+
+/* =========================
+   NOTIFICATION DROPDOWN
+========================= */
+
+.notification-dropdown {
+    position: absolute;
+
+    left: calc(100% + 10px);
+    top: 0;
+
+    width: 350px;
+    max-height: 450px;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 10000;
+}
+
+
+/* =========================
+   DROPDOWN HEADER
+========================= */
+
+.notification-header {
+    padding: 15px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* =========================
+   NOTIFICATION ITEM
+========================= */
+
+.notification-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #eee;
+
+    transition: background 0.15s ease;
+}
+
+
+/* Hover */
+
+.notification-item:hover {
+    background: #f5f5f5;
+}
+
+
+/* Nepročitana */
+
+.notification-item.unread {
+    background: #eef5ff;
+}
+
+
+/* =========================
+   NOTIFICATION ICON
+========================= */
+
+.notification-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.notification-icon mat-icon {
     font-size: 22px;
-    min-width: 24px;
-    text-align: center;
 }
 
-.sidebar a span {
+
+/* =========================
+   NOTIFICATION CONTENT
+========================= */
+
+.notification-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* Notification date */
+
+.notification-content small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-notifications {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #888;
+}
+
+
+/* =========================
+   OPTIONAL:
+   SCROLLBAR
+========================= */
+
+.notification-dropdown::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notification-dropdown::-webkit-scrollbar-thumb {
+    background: #ccc;
+
+    border-radius: 10px;
+}
+
+.logout-button {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 55px;
+
+    padding: 0 28px;
+
+    color: #555;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+    font-size: 16px;
+    white-space: nowrap;
+
+    transition: 0.2s;
+
+    margin-top: 20px;
+}
+
+.logout-button mat-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.logout-button span {
     margin-left: 20px;
     opacity: 0;
     transform: translateX(-10px);
     transition: 0.2s;
 }
 
-.sidebar a mat-icon {
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    opacity: 1;
-    visibility: visible;
-}
-
-.sidebar:hover a span {
+.sidebar:hover .logout-button span {
     opacity: 1;
     transform: translateX(0);
 }
 
-.sidebar a:hover {
+.logout-button:hover {
     background: #f5f5f5;
+    color: #e53935;
 }
-
-.sidebar a.active {
-    color: #2196F3;
-    background: #EAF4FF;
-}
-
-.sidebar a.active i {
-    color: #2196F3;
-}
-

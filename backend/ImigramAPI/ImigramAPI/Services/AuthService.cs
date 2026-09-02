@@ -31,7 +31,8 @@ namespace ImigramAPI.Services
             return new LoginResponseDto
             {
                 Token = token,
-                Username = user.Username
+                Username = user.Username,
+                Id = user.Id,
             };
         }
 

@@ -10,5 +10,6 @@ namespace ImigramAPI.Repositories.Interfaces
         Task Update(Post post);
         Task Delete(string id);
         Task<List<Post>> GetByUserId(string userId);
+        
     }
 }

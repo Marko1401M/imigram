@@ -24,7 +24,11 @@ export class AuthService {
             username: username,
             password: password
         }
-        ).pipe(tap(response =>{localStorage.setItem('token', response.token)}))
+        ).pipe(tap(response =>{
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('userId', response.id);
+
+        }))
     }
 
     register(formData: FormData){

@@ -3,84 +3,208 @@
   "WorkspaceRootPath": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\loginresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\likeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\likeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\interfaces\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\interfaces\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\followcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\followcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\followrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\followrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\interfaces\\ifollowrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\interfaces\\ifollowrequestservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\interfaces\\ifollowservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\followrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\followrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\ifollowrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\ifollowrequestrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\removefollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\removefollowdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\followdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\followdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\followservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\followservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\likecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\likecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\controllers\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\followrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\followrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\ifollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\ifollowrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\likerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\likerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\database\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\database\\mongodbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\follow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\followrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\followrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\interfaces\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\createnotificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\.vs\\ImigramAPI.slnx\\config\\applicationhost.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.vs\\ImigramAPI.slnx\\config\\applicationhost.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\imigramapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\imigramapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\commentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\like.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\ilikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\ilikerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\services\\interfaces\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\services\\interfaces\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\models\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|c:\\users\\markoo\\desktop\\web2_repo\\imigram\\backend\\imigramapi\\imigramapi\\dtos\\addcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{10821F55-E1CE-8507-1CD4-8A2B6A38827D}|ImigramAPI\\ImigramAPI.csproj|solutionrelative:imigramapi\\dtos\\addcommentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,19 +214,33 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "LoginResponseDto.cs",
               "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\LoginResponseDto.cs",
               "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\LoginResponseDto.cs",
               "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\LoginResponseDto.cs",
               "RelativeToolTip": "ImigramAPI\\DTOs\\LoginResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T07:16:30.493Z"
+              "WhenOpened": "2026-09-02T07:54:45.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\AuthService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-02T07:54:23.283Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -112,227 +250,587 @@
               "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ImigramAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:56:39.259Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\AuthService.cs",
-              "RelativeToolTip": "ImigramAPI\\Services\\AuthService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:51:20.519Z",
+              "WhenOpened": "2026-09-02T07:54:09.997Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "ImigramAPI\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA5wB4AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:37:00.249Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "ImigramAPI\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:35:14.182Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ImigramAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\appsettings.json",
-              "RelativeToolTip": "ImigramAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-30T08:44:07.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "ImigramAPI\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAFAAAAAAAAAA==",
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\PostController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\PostController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\PostController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:16:20.033Z"
+              "WhenOpened": "2026-08-17T12:34:36.171Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Program.cs",
               "RelativeDocumentMoniker": "ImigramAPI\\Program.cs",
               "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Program.cs",
               "RelativeToolTip": "ImigramAPI\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAtwDEAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAowIcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T08:54:06.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-17T12:39:06.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\NotificationService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wCsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:40:25.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\NotificationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T06:59:16.829Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\Interfaces\\INotificationService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:38:54.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\INotificationRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\INotificationRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\INotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:13:57.339Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\JwtService.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\JwtService.cs",
-              "RelativeToolTip": "ImigramAPI\\Services\\JwtService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAACIAAABrAAAAAAAAAA==",
+              "Title": "NotificationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\NotificationRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\NotificationRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\NotificationRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\NotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T06:53:11.495Z"
+              "WhenOpened": "2026-08-29T10:34:49.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "ImigramAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "ImigramAPI\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-31T07:08:41.204Z"
+              "DocumentIndex": 3,
+              "Title": "PostService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\PostService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\PostService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\PostService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\PostService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T11:10:59.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Hubs\\NotificationHub.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "ImigramAPI\\Hubs\\NotificationHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:04:02.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "ImigramAPI\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:04:24.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LikeService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\LikeService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\LikeService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\LikeService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\LikeService.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwDMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T11:32:26.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPostService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IPostService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\Interfaces\\IPostService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IPostService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\Interfaces\\IPostService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-01T07:32:06.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\PostDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\PostDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\PostDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\PostDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T11:10:44.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Notification.cs",
+              "RelativeToolTip": "ImigramAPI\\Models\\Notification.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:05:21.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FollowController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\FollowController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\FollowController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\FollowController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\FollowController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T08:27:58.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FollowRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\FollowRequestService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\FollowRequestService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\FollowRequestService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\FollowRequestService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:27:02.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IFollowRequestService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IFollowRequestService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\Interfaces\\IFollowRequestService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IFollowRequestService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\Interfaces\\IFollowRequestService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:24:47.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FollowRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\FollowRequestRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\FollowRequestRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\FollowRequestRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\FollowRequestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:20:44.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "RemoveFollowDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\RemoveFollowDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\RemoveFollowDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\RemoveFollowDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\RemoveFollowDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T08:36:55.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\UserController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T08:31:11.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FollowDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\FollowDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\FollowDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\FollowDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\FollowDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T08:29:51.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IFollowRequestRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IFollowRequestRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\IFollowRequestRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IFollowRequestRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\IFollowRequestRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:17:32.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IFollowService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IFollowService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\Interfaces\\IFollowService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\IFollowService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\Interfaces\\IFollowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:35:42.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FollowService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\FollowService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\FollowService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\FollowService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\FollowService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:37:56.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LikeController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\LikeController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\LikeController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\LikeController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\LikeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:34:34.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\CommentController.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Controllers\\CommentController.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Controllers\\CommentController.cs",
+              "RelativeToolTip": "ImigramAPI\\Controllers\\CommentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:34:15.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FollowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\FollowRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\FollowRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\FollowRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\FollowRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA0wBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T07:57:25.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IFollowRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IFollowRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\IFollowRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IFollowRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\IFollowRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T07:55:18.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CommentService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\CommentService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\CommentService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\CommentService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\CommentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:29:45.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-30T11:48:12.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\User.cs",
               "RelativeDocumentMoniker": "ImigramAPI\\Models\\User.cs",
               "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\User.cs",
               "RelativeToolTip": "ImigramAPI\\Models\\User.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T11:01:04.857Z"
+              "WhenOpened": "2026-08-30T07:49:09.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\RegisterDto.cs",
-              "RelativeToolTip": "ImigramAPI\\DTOs\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:47:51.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MongoDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Database\\MongoDbContext.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Database\\MongoDbContext.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Database\\MongoDbContext.cs",
-              "RelativeToolTip": "ImigramAPI\\Database\\MongoDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-30T08:51:40.312Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 37,
               "Title": "Follow.cs",
               "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Follow.cs",
               "RelativeDocumentMoniker": "ImigramAPI\\Models\\Follow.cs",
               "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Follow.cs",
               "RelativeToolTip": "ImigramAPI\\Models\\Follow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-03T06:16:07.826Z"
+              "WhenOpened": "2026-08-30T07:50:46.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "applicationhost.config",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\.vs\\ImigramAPI.slnx\\config\\applicationhost.config",
-              "RelativeDocumentMoniker": ".vs\\ImigramAPI.slnx\\config\\applicationhost.config",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\.vs\\ImigramAPI.slnx\\config\\applicationhost.config",
-              "RelativeToolTip": ".vs\\ImigramAPI.slnx\\config\\applicationhost.config",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAFUAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-07-31T07:04:47.427Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\LoginDto.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\LoginDto.cs",
-              "RelativeToolTip": "ImigramAPI\\DTOs\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 38,
+              "Title": "FollowRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\FollowRequest.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Models\\FollowRequest.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\FollowRequest.cs",
+              "RelativeToolTip": "ImigramAPI\\Models\\FollowRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T07:50:32.748Z"
+              "WhenOpened": "2026-08-30T07:51:17.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IJwtService.cs",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Interfaces\\IJwtService.cs",
-              "RelativeDocumentMoniker": "ImigramAPI\\Interfaces\\IJwtService.cs",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Interfaces\\IJwtService.cs",
-              "RelativeToolTip": "ImigramAPI\\Interfaces\\IJwtService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-31T06:52:31.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "ImigramAPI\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\appsettings.Development.json",
-              "RelativeToolTip": "ImigramAPI\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-30T08:44:15.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": ".gitignore",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\.gitignore",
-              "RelativeDocumentMoniker": "ImigramAPI\\.gitignore",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\.gitignore",
-              "RelativeToolTip": "ImigramAPI\\.gitignore",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-07-30T09:03:55.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ImigramAPI.csproj",
-              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\ImigramAPI.csproj",
-              "RelativeDocumentMoniker": "ImigramAPI\\ImigramAPI.csproj",
-              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\ImigramAPI.csproj",
-              "RelativeToolTip": "ImigramAPI\\ImigramAPI.csproj",
+              "DocumentIndex": 36,
+              "Title": "IPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IPostRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\IPostRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IPostRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\IPostRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-30T09:04:37.956Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:38:30.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "MongoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Database\\MongoDbContext.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Database\\MongoDbContext.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Database\\MongoDbContext.cs",
+              "RelativeToolTip": "ImigramAPI\\Database\\MongoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:12:39.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "LikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\LikeRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\LikeRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\LikeRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\LikeRepository.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:37:17.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "PostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\PostRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\PostRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\PostRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\PostRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:37:03.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "CreateNotificationDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\CreateNotificationDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\CreateNotificationDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\CreateNotificationDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\CreateNotificationDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:43:43.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:37:10.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Like.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Like.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Models\\Like.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Like.cs",
+              "RelativeToolTip": "ImigramAPI\\Models\\Like.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:05:37.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\CommentRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\CommentRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\CommentRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\CommentRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:24:58.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ILikeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\ILikeRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\ILikeRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\ILikeRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\ILikeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:14:04.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "ICommentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\ICommentRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\ICommentRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\ICommentRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\ICommentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:14:03.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "ImigramAPI\\Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-29T10:13:59.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "CommentResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\CommentResponseDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\CommentResponseDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\CommentResponseDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\CommentResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T13:10:11.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AddCommentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\AddCommentDto.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\DTOs\\AddCommentDto.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\DTOs\\AddCommentDto.cs",
+              "RelativeToolTip": "ImigramAPI\\DTOs\\AddCommentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:27:17.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Comment.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Models\\Comment.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Models\\Comment.cs",
+              "RelativeToolTip": "ImigramAPI\\Models\\Comment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:26:27.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ICommentService.cs",
+              "DocumentMoniker": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\ICommentService.cs",
+              "RelativeDocumentMoniker": "ImigramAPI\\Services\\Interfaces\\ICommentService.cs",
+              "ToolTip": "C:\\Users\\Markoo\\Desktop\\WEB2_repo\\imigram\\backend\\ImigramAPI\\ImigramAPI\\Services\\Interfaces\\ICommentService.cs",
+              "RelativeToolTip": "ImigramAPI\\Services\\Interfaces\\ICommentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-17T12:25:38.911Z"
             }
           ]
         }

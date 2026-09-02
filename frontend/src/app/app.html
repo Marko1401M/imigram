@@ -193,10 +193,41 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<app-navbar>
+<app-navbar *ngIf="showNavbar()">
 
 </app-navbar>
+@if (currentNotification(); as notification) {
+
+    <div class="notification-toast">
+
+        <div class="toast-icon">
+            <mat-icon>notifications</mat-icon>
+        </div>
+
+        <div class="toast-content">
+
+            <strong>Nova notifikacija</strong>
+
+            <span>
+                {{ notification.message }}
+            </span>
+
+        </div>
+
+        <button
+            class="toast-close"
+            (click)="currentNotification.set(null)">
+
+            ×
+
+        </button>
+
+    </div>
+
+}
+
 <div class="main-content">
+
   <router-outlet />
 </div>
 

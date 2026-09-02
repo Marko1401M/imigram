@@ -1,4 +1,5 @@
 using ImigramAPI.Database;
+using ImigramAPI.Hubs;
 using ImigramAPI.Repositories;
 using ImigramAPI.Repositories.Interfaces;
 using ImigramAPI.Services;
@@ -13,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi 
 
 builder.Services.AddEndpointsApiExplorer();
 
@@ -75,17 +76,39 @@ builder.Services.AddSwaggerGen(options =>
 
 builder.Services.AddSingleton<MongoDbContext>();
 
+builder.Services.AddSignalR();
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddScoped<IPostRepository, PostRepository>();
 
 builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
+builder.Services.AddScoped<ILikeRepository, LikeRepository>();
+
 builder.Services.AddScoped<IAuthService, AuthService>();
+
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IJwtService, JwtService>();
 
 builder.Services.AddScoped<IPostService, PostService>();
+
+builder.Services.AddScoped<ICommentService, CommentService>();
+
+builder.Services.AddScoped<ILikeService, LikeService>();
+
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+
+builder.Services.AddScoped<INotificationService, NotificationService>();
+
+builder.Services.AddScoped<IFollowRepository, FollowRepository>();
+
+builder.Services.AddScoped<IFollowRequestRepository, FollowRequestRepository>();
+
+builder.Services.AddScoped<IFollowService, FollowService>();
+
+builder.Services.AddScoped<IFollowRequestService, FollowRequestService>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -101,6 +124,25 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
         };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnMessageReceived = context =>
+            {
+                var accessToken = context.Request.Query["access_token"];
+
+                var path = context.HttpContext.Request.Path;
+
+                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs/notifications"))
+                {
+                    context.Token = accessToken;
+                }
+
+                return Task.CompletedTask;
+
+
+            }
+        };
     });
 
 builder.Services.AddAuthorization();
@@ -112,7 +154,8 @@ builder.Services.AddCors(options =>
         policy
         .WithOrigins("http://localhost:4200")
         .AllowAnyHeader()
-        .AllowAnyMethod();
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
 
@@ -127,6 +170,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();
@@ -134,5 +179,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<NotificationHub>("/hubs/notifications");
 
 app.Run();

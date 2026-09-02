@@ -1,0 +1,47 @@
+<div class="feed">
+    <ng-container *ngIf="post() as currentPost">
+        <app-post-card
+            
+            [post]="currentPost">
+        </app-post-card>
+
+        <div class="comment-form">
+            <textarea
+                [(ngModel)]="newComment"
+                placeholder="Napiši komentar..."
+                rows="3">
+            </textarea>
+
+            <button (click)="addComment()">
+                Komentariši
+            </button>
+        </div>
+
+    <div class="comments" *ngIf="comments().length > 0">
+
+        <h3>Komentari</h3>
+
+        <div class="comment" *ngFor="let comment of comments()">
+
+            <img
+                class="comment-avatar"
+                src="https://localhost:7109{{comment.profileImage}}"
+                alt="Profile">
+
+            <div class="comment-content">
+
+                <strong>{{ comment.fullName }}</strong>
+
+                <p>{{ comment.content }}</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="no-comments" *ngIf="comments().length === 0">
+        Nema komentara.
+    </div>
+    </ng-container>
+</div>

@@ -1,0 +1,59 @@
+<div class="profile-page">
+
+    <!-- PROFILE HEADER -->
+    <div class="profile-header" *ngIf="user() as currentUser">
+
+        <img
+            class="profile-image"
+            [src]="'https://localhost:7109' + currentUser.profileImage"
+            alt="Profile image">
+
+        <div class="profile-info">
+
+            <h2>
+                {{ currentUser.firstName }}
+                {{ currentUser.lastName }}
+            </h2>
+
+            <h3>
+                @{{ currentUser.username }}
+            </h3>
+
+            <p *ngIf="currentUser.bio">
+                {{ currentUser.bio }}
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- POSTS -->
+    <div class="posts-section">
+
+        <h3>Objave</h3>
+
+
+        <div
+            class="posts"
+            *ngIf="posts().length > 0">
+
+            <app-post-card
+                *ngFor="let post of posts()"
+                [post]="post">
+            </app-post-card>
+
+        </div>
+
+
+        <div
+            class="no-posts"
+            *ngIf="posts().length === 0">
+
+            <p>Ovaj korisnik još uvek nema objava.</p>
+
+        </div>
+
+    </div>
+
+</div>

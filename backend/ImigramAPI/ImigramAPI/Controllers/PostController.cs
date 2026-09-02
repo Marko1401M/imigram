@@ -27,5 +27,29 @@ namespace ImigramAPI.Controllers
 
             return Ok(result);
         }
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPost(string id)
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var result = await  _postService.GetPost(id, userId);
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _postService.GetPosts();
+
+            return Ok(result);
+        }
+        [Authorize]
+        [HttpGet("all/{userId}")]
+        public async Task<IActionResult> GetAllPostForUser(string userId) {
+            var result = await _postService.GetAllPostsForUser(userId);
+
+            return Ok(result);
+        }
+        
     }
 }

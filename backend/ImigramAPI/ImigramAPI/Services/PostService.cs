@@ -2,17 +2,24 @@
 using ImigramAPI.Models;
 using ImigramAPI.Repositories.Interfaces;
 using ImigramAPI.Services.Interfaces;
+using System.Security.Claims;
 
 namespace ImigramAPI.Services
 {
     public class PostService : IPostService
     {
         private readonly IPostRepository _postRepository;
+        private readonly IUserRepository _userRepository;
+        private readonly ILikeRepository _likeRepository;
         private readonly IWebHostEnvironment _environment;
-        public PostService(IPostRepository postRepository, IWebHostEnvironment environment)
+        private readonly INotificationService _notificationService;
+        public PostService(IPostRepository postRepository, IWebHostEnvironment environment, IUserRepository userRepository, ILikeRepository likeRepository, INotificationService notificationService)
         {
             _postRepository = postRepository;
             _environment = environment;
+            _userRepository = userRepository;
+            _likeRepository = likeRepository;
+            _notificationService = notificationService;
         }
 
         public async Task<Post> CreatePost(CreatePostDto dto, string userId)
@@ -43,7 +50,7 @@ namespace ImigramAPI.Services
             }
 
             await _postRepository.Create(post);
-
+            
             return post;
         }
         private async Task<string> SaveFile(IFormFile file)
@@ -66,14 +73,84 @@ namespace ImigramAPI.Services
 
             return "/uploads/" + fileName;
         }
-        public async Task<Post?> GetPost(string id)
+        public async Task<PostDto?> GetPost(string id, string userId)
         {
-            return await _postRepository.GetById(id);
-        }
+            var post =  await _postRepository.GetById(id);
+            var user = await _userRepository.GetById(post.UserId);
+ 
+            bool isLiked = (await _likeRepository.GetLike(post.Id, userId)) != null;
+            var postDto = new PostDto
+            {
+                Id = id,
+                UserId = user.Id,
+                FullName = user.FirstName + user.LastName,
+                Username = user.Username,
+                ProfileImage = user.ProfileImage,
+                Content = post.Content,
+                Media = post.Media,
+                CreatedAt = post.CreatedAt,
+                LikesCount = post.LikedBy.Count,
+                IsLiked = isLiked,
+                CommentsCount = post.CommentsCount,
+                Location = post.Location
 
-        public async Task<List<Post>> GetPosts()
+            };
+            return postDto;
+        }
+        public async Task<List<PostDto>> GetAllPostsForUser(string userId)
         {
-            return await _postRepository.GetAll();
+            List<Post> list = await _postRepository.GetByUserId(userId);
+            List<PostDto> list2 = new List<PostDto>();
+            foreach (var post in list)
+            {
+                var user = await _userRepository.GetById(post.UserId);
+                bool isLiked = (await _likeRepository.GetLike(post.Id, post.UserId)) != null;
+                var postDto = new PostDto
+                {
+                    Id = post.Id,
+                    UserId = user.Id,
+                    FullName = user.FirstName + user.LastName,
+                    Username = user.Username,
+                    ProfileImage = user.ProfileImage,
+                    Content = post.Content,
+                    Media = post.Media,
+                    CreatedAt = post.CreatedAt,
+                    LikesCount = post.LikedBy.Count,
+                    IsLiked = isLiked,
+                    CommentsCount = post.CommentsCount,
+                    Location = post.Location
+
+                };
+                list2.Add(postDto);
+            }
+            return list2;
+        }
+        public async Task<List<PostDto>> GetPosts()
+        {
+            List<Post> list = await _postRepository.GetAll();
+            List<PostDto> list2 = new List<PostDto>();
+            foreach(var post in list) {
+                var user = await _userRepository.GetById(post.UserId);
+                bool isLiked = (await _likeRepository.GetLike(post.Id, post.UserId)) != null;
+                var postDto = new PostDto
+                {
+                    Id = post.Id,
+                    UserId = user.Id,
+                    FullName = user.FirstName + user.LastName,
+                    Username = user.Username,
+                    ProfileImage = user.ProfileImage,
+                    Content = post.Content,
+                    Media = post.Media,
+                    CreatedAt = post.CreatedAt,
+                    LikesCount = post.LikedBy.Count,
+                    IsLiked = isLiked,
+                    CommentsCount = post.CommentsCount,
+                    Location = post.Location
+
+                };
+                list2.Add(postDto);
+            }
+            return list2;
         }
     }
 }

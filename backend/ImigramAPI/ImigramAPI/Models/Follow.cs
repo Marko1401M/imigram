@@ -9,6 +9,6 @@ namespace ImigramAPI.Models
         public string Id { get; set; }
         public string FollowerId { get; set; }
         public string FollowingId { get; set; }
-        public DateTime FollowedAt { get; set; }
+        public DateTime CreatedAt { get; set; }
     }
 }

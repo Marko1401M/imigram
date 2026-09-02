@@ -1,0 +1,230 @@
+.post-card{
+
+    width:100%;
+    max-width:650px;
+
+    margin:25px auto;
+
+    background:white;
+
+    border-radius:14px;
+
+    box-shadow:0 4px 18px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.post-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.user-info{
+
+    display:flex;
+
+    gap:15px;
+
+    align-items:center;
+
+}
+
+.avatar{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.user-info h4{
+
+    margin:0;
+
+    font-size:16px;
+
+}
+
+.user-info span{
+
+    display:block;
+
+    color:#777;
+
+    font-size:13px;
+
+}
+
+.menu-btn{
+
+    border:none;
+
+    background:none;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.post-content{
+
+    padding:0 18px 18px;
+
+    line-height:1.6;
+
+    font-size:15px;
+
+}
+
+.media-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.media-container img{
+
+    width:100%;
+
+    max-height:650px;
+
+    object-fit:cover;
+
+}
+
+.media-container video{
+    width:100%;
+}
+
+.post-footer{
+
+    padding:15px 18px;
+
+}
+
+.stats{
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+.actions{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    border-top:1px solid #ececec;
+
+    padding-top:12px;
+
+}
+
+.actions button{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#444;
+
+    transition:.2s;
+
+}
+
+.actions button:hover{
+
+    color:#1976d2;
+
+}
+
+.media-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-media {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+.media-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    cursor: pointer;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.media-arrow.left {
+    left: 15px;
+}
+
+.media-arrow.right {
+    right: 15px;
+}
+
+.media-arrow.left::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+
+    transform: rotate(45deg);
+}
+
+.media-arrow.right::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+
+    border-right: 3px solid white;
+    border-top: 3px solid white;
+
+    transform: rotate(45deg);
+}

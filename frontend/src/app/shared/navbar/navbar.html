@@ -1,6 +1,7 @@
 <nav class="sidebar">
+
   <a routerLink="/home" routerLinkActive="active">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+    <mat-icon>home</mat-icon>
     <span>Početna</span>
   </a>
 
@@ -19,14 +20,91 @@
     <span>Inbox</span>
   </a>
 
-  <a routerLink="/notifications" routerLinkActive="active">
-    <mat-icon>notifications</mat-icon>
-    <span>Obaveštenja</span>
-  </a>
 
-  
-  <a routerLink="/profile" routerLinkActive="active">
+  <!-- NOTIFICATIONS -->
+
+  <div class="notification-wrapper">
+
+    <button
+      class="notification-button"
+      (click)="toggleNotifications()">
+
+      <mat-icon>notifications</mat-icon>
+
+      <span>Obaveštenja</span>
+
+      <span
+        class="notification-badge"
+        *ngIf="getUnreadCount() > 0">
+
+        {{ getUnreadCount() }}
+
+      </span>
+
+    </button>
+
+
+    <!-- DROPDOWN -->
+
+    <div
+      class="notification-dropdown"
+      *ngIf="showNotifications()">
+
+      <div class="notification-header">
+        <strong>Obaveštenja</strong>
+      </div>
+
+
+      <div
+        class="notification-item"
+        *ngFor="let notification of notifications()"
+        [class.unread]="!notification.isRead"
+        (click)="openNotification(notification)">
+
+        <div class="notification-icon">
+          <mat-icon>notifications</mat-icon>
+        </div>
+
+        <div class="notification-content">
+
+          <div>
+            {{ notification.message }}
+          </div>
+
+          <small>
+            {{ notification.createdAt | date:'dd.MM.yyyy HH:mm' }}
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="empty-notifications"
+        *ngIf="notifications.length === 0">
+
+        Nema novih obaveštenja.
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a [routerLink]="['/profile', userId()]" routerLinkActive="active">
     <mat-icon>person</mat-icon>
     <span>Profil</span>
   </a>
+
+  <button
+    class="logout-button"
+    (click)="logout()">
+
+    <mat-icon>logout</mat-icon>
+    <span>Odjava</span>
+
+  </button>
+
 </nav>
