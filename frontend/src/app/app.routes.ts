@@ -6,6 +6,9 @@ import { Home } from './features/pages/home/home';
 import { authGuard } from './core/guards/auth-guard';
 import { PostDetails } from './features/pages/post-details/post-details';
 import { Profile } from './features/pages/profile/profile';
+import { FollowersPage } from './features/pages/followers-page/followers-page';
+import { InboxPage } from './features/pages/inbox-page/inbox-page';
+import { AdminPanel } from './features/pages/admin-panel/admin-panel';
 
 export const routes: Routes = [
     {
@@ -38,6 +41,26 @@ export const routes: Routes = [
     {
         path:'profile/:id',
         component: Profile,
+        canActivate:[authGuard]
+    },
+    {
+        path:'followers',
+        component: FollowersPage,
+        canActivate:[authGuard]
+    },
+    {
+        path:'inbox/:id',
+        component: InboxPage,
+        canActivate:[authGuard]
+    },
+    {
+        path:'inbox',
+        component: InboxPage,
+        canActivate:[authGuard]
+    },
+    {
+        path:'admin-panel',
+        component: AdminPanel,
         canActivate:[authGuard]
     }
 ];

@@ -1,7 +1,7 @@
 <div class="feed">
     <ng-container *ngIf="post() as currentPost">
         <app-post-card
-            
+            (postDeleted)="onPostDeleted($event)"
             [post]="currentPost">
         </app-post-card>
 

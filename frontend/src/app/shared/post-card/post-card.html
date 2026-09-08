@@ -1,4 +1,4 @@
-<div class="post-card">
+@if(!post.isDeleted){ <div class="post-card">
     <div class="post-header" (click)="showPost()">
 
         <div class="user-info">
@@ -10,7 +10,7 @@
 
             <div>
 
-                <h4>Ime Prezime</h4>
+                <h4>{{post.fullName}}</h4>
 
                 <span>
                     {{ post.createdAt | date:'dd.MM.yyyy HH:mm' }}
@@ -26,9 +26,39 @@
 
         </div>
 
-        <button class="menu-btn">
-            ⋮
-        </button>
+        <div class="post-menu">
+    <button class="menu-btn" (click)="toggleMenu($event)">
+        ⋮
+    </button>
+
+    @if (menuOpen()) {
+        <div class="dropdown-menu" (click)="$event.stopPropagation()">
+
+            @if (isOwner()) {
+                <button (click)="editPost()">
+                    <mat-icon>edit</mat-icon>
+                    Edit
+                </button>
+
+                <button class="danger" (click)="deletePost()">
+                    <mat-icon>delete</mat-icon>
+                     Delete
+                </button>
+            } @else {
+                <button (click)="reportPost()">
+                    <mat-icon>report</mat-icon>
+                    Report
+                </button>
+            }
+
+            <button (click)="copyLink()">
+                <mat-icon>copy</mat-icon>
+                Copy link
+            </button>
+
+        </div>
+    }
+</div>
 
     </div>
 
@@ -61,30 +91,38 @@
 
     <div class="post-footer">
 
-        <div class="stats">
+    <div class="stats">
 
-            ❤️ {{ post.likesCount }}
+        <mat-icon>favorite</mat-icon>
+        {{ post.likesCount }}
 
-            <span>
+        <span>
+            <mat-icon>comment</mat-icon>
+            {{ post.commentsCount }}
+        </span>
 
-                💬 {{ post.commentsCount }}
+    </div>
 
-            </span>
+    <div class="actions">
 
-        </div>
+        <button style="width:100px" (click)="toggleLike()">
+            <mat-icon [class.liked]="post.isLiked">
+                {{ post.isLiked ? 'favorite' : 'favorite_border' }}
+            </mat-icon>
+        </button>
 
-        <div class="actions">
+        <button>
+            <mat-icon>comment</mat-icon>
+            Comment
+        </button>
 
-            <button style="width:100px" (click)="toggleLike()">
-                {{ post.isLiked ? '❤️' : '🤍' }}
-            </button>
-
-            <button>💬 Comment</button>
-
-            <button>↗ Share</button>
-
-        </div>
+        <button>
+            <mat-icon>share</mat-icon>
+            Share
+        </button>
 
     </div>
 
 </div>
+
+</div>}

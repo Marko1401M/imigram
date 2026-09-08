@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostService } from '../../../core/services/post-service';
 import { signal } from '@angular/core';
 import { PostAll } from '../../models/post-all';
@@ -13,6 +13,7 @@ import { form } from '@angular/forms/signals';
 @Component({
   selector: 'app-post-details',
   imports: [PostCard, CommonModule, FormsModule],
+  standalone: true,
   templateUrl: './post-details.html',
   styleUrl: './post-details.css',
 })
@@ -23,7 +24,7 @@ export class PostDetails implements OnInit {
   newComment = '';
   postId!: string;
 
-  constructor(private route: ActivatedRoute, private postService: PostService, private commentService: CommentService){}
+  constructor(private route: ActivatedRoute, private postService: PostService, private commentService: CommentService, private router: Router){}
 
   ngOnInit(): void {
     this.postId = this.route.snapshot.paramMap.get('id')!;
@@ -31,7 +32,9 @@ export class PostDetails implements OnInit {
     this.loadPost();
     this.loadComments();
   }
-
+  onPostDeleted(postId: string){
+    this.router.navigate(['/home'])
+  }
   loadPost(): void{
     this.postService.getPost(this.postId).subscribe({
       next:(response)=>{

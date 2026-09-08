@@ -39,6 +39,9 @@ namespace ImigramAPI.Repositories
             return await _context.Users.Find(u => u.Username == username).FirstOrDefaultAsync();
         }
 
-        
+        public async Task<List<User>> GetByBanStatus(bool banned)
+        {
+            return await _context.Users.Find(u => u.IsBanned == banned).ToListAsync();
+        }
     }
 }

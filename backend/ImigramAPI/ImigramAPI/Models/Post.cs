@@ -14,5 +14,6 @@ namespace ImigramAPI.Models
         public List<string> LikedBy { get; set; } = new List<string>();
         public int CommentsCount { get; set; }
         public PostLocation? Location { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

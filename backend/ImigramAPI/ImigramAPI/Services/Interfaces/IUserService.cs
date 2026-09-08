@@ -5,5 +5,6 @@ namespace ImigramAPI.Services.Interfaces
     public interface IUserService
     {
         public Task<UserDto> GetUserById(string userId);
+        public Task<List<UserDto>> GetBannedUsers();
     }
 }

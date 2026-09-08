@@ -31,6 +31,7 @@ export class NotificationService {
     }
 
     startConnection(){
+        
         this.hubConnection = new signalR.HubConnectionBuilder().withUrl(this.hubUrl,{
             accessTokenFactory: ()=>{
                 const token = localStorage.getItem('token')
@@ -58,6 +59,8 @@ export class NotificationService {
                 console.log("Greska prilikom reprodukovanja zvuka");
             })
         });
+        
+        if(this.hubConnection.state == signalR.HubConnectionState.Connected || this.hubConnection.state == signalR.HubConnectionState.Connecting) return;
 
         this.hubConnection.start()
         .then(() => console.log("SignalR connected"))

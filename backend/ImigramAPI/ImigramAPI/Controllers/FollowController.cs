@@ -18,7 +18,7 @@ namespace ImigramAPI.Controllers
         }
         [Authorize]
         [HttpPost("send_request")]
-        public async Task<IActionResult> SendFollowRequest([FromBody] FollowDto dto)
+        public async Task<IActionResult> SendFollowRequest([FromForm] FollowDto dto)
         {
             var senderId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
@@ -61,13 +61,15 @@ namespace ImigramAPI.Controllers
         [HttpGet("followers/{userId}")]
         public async Task<IActionResult> GetFollowers(string userId)
         {
+            Console.WriteLine($"User_Followers_Test: {userId}");
             var result = await _followService.GetFollowers(userId);
 
             return Ok(result);
         }
         [Authorize]
-        [HttpGet("follow_request/{userId}")]
-        public async Task<IActionResult> GetFollowRequests(string userId) { 
+        [HttpGet("follow_request")]
+        public async Task<IActionResult> GetFollowRequests() {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var result = await _followRequestService.GetRequestsForUser(userId);
            
             return Ok(result);
@@ -81,8 +83,9 @@ namespace ImigramAPI.Controllers
 
             var result = await _followRequestService.Check(senderId, receiverId);
 
-            return Ok(result);
+            return Ok(new {result});
         }
+
         
     }
 }

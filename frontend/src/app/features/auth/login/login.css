@@ -65,3 +65,13 @@ a {
   margin-top:20px;
   color:#1565c0;
 }
+
+.error-message {
+  color: #d32f2f;
+  background-color: #ffebee;
+  border: 1px solid #ef9a9a;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 14px;
+}

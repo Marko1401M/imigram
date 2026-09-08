@@ -22,5 +22,8 @@ namespace ImigramAPI.Database
         public IMongoCollection<Like> Likes => _database.GetCollection<Like>("Likes");
         public IMongoCollection<Notification> Notifications => _database.GetCollection<Notification>("Notifications");
         public IMongoCollection<FollowRequest> FollowRequests => _database.GetCollection<FollowRequest>("FollowRequests");
+        public IMongoCollection<Chat> Chats => _database.GetCollection<Chat>("Chats");
+        public IMongoCollection<Message> Messages => _database.GetCollection<Message>("Messages");
+        public IMongoCollection<Report> Reports => _database.GetCollection<Report>("Reports");
     }
 }

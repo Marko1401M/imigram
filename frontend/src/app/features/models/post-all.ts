@@ -21,5 +21,7 @@ export interface PostAll {
   commentsCount: number;
 
   location?: PostLocation;
-}
+
+  isDeleted: boolean;
+};
 

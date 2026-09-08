@@ -1,0 +1,580 @@
+.admin-page {
+min-height: 100vh;
+padding: 32px;
+background: #f6f8fb;
+color: #1f2937;
+}
+
+/* ================= HEADER ================= */
+
+.admin-header {
+max-width: 1100px;
+margin: 0 auto 28px;
+}
+
+.admin-header h1 {
+margin: 0;
+font-size: 30px;
+font-weight: 700;
+}
+
+.admin-header p {
+margin: 6px 0 0;
+color: #6b7280;
+font-size: 14px;
+}
+
+/* ================= TABS ================= */
+
+.tabs {
+max-width: 1100px;
+margin: 0 auto 28px;
+
+display: flex;
+gap: 4px;
+
+border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+border: none;
+background: transparent;
+
+padding: 13px 20px;
+
+display: flex;
+align-items: center;
+gap: 8px;
+
+color: #6b7280;
+
+font-size: 14px;
+font-weight: 600;
+
+cursor: pointer;
+
+border-bottom: 2px solid transparent;
+
+transition: 0.2s;
+}
+
+.tab:hover {
+color: #2563eb;
+}
+
+.tab.active {
+color: #2563eb;
+border-bottom-color: #2563eb;
+}
+
+.tab-count {
+min-width: 20px;
+height: 20px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 10px;
+
+background: #eef2ff;
+color: #2563eb;
+
+font-size: 11px;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.section-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+margin-bottom: 18px;
+}
+
+.section-header h2 {
+margin: 0;
+
+font-size: 21px;
+font-weight: 700;
+}
+
+.section-header p {
+margin: 5px 0 0;
+
+font-size: 13px;
+color: #9ca3af;
+}
+
+.section-header select {
+padding: 9px 13px;
+
+border: 1px solid #d1d5db;
+border-radius: 8px;
+
+background: white;
+
+color: #374151;
+
+font-size: 13px;
+
+outline: none;
+cursor: pointer;
+}
+
+.section-header select:focus {
+border-color: #2563eb;
+}
+
+/* ================= REPORTS ================= */
+
+.reports {
+display: flex;
+flex-direction: column;
+gap: 13px;
+}
+
+.report-card {
+background: white;
+
+border: 1px solid #e5e7eb;
+border-radius: 11px;
+
+padding: 19px;
+
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025);
+}
+
+/* REPORT HEADER */
+
+.report-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+margin-bottom: 17px;
+}
+
+.report-meta {
+display: flex;
+align-items: center;
+gap: 9px;
+}
+
+.report-label {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.5px;
+color: #6b7280;
+}
+
+.date {
+font-size: 11px;
+color: #9ca3af;
+}
+
+/* STATUS */
+
+.status {
+padding: 4px 8px;
+
+border-radius: 20px;
+
+font-size: 11px;
+font-weight: 600;
+}
+
+.status.pending {
+background: #fff7ed;
+color: #c2410c;
+}
+
+.status.action {
+background: #ecfdf5;
+color: #047857;
+}
+
+.status.ignored {
+background: #f3f4f6;
+color: #6b7280;
+}
+
+/* ================= USERS ================= */
+
+.users {
+display: flex;
+align-items: center;
+gap: 20px;
+
+padding: 15px 0;
+
+border-top: 1px solid #f1f3f5;
+border-bottom: 1px solid #f1f3f5;
+}
+
+.user {
+display: flex;
+align-items: center;
+gap: 10px;
+
+min-width: 180px;
+}
+
+.user img,
+.avatar-placeholder {
+width: 40px;
+height: 40px;
+
+border-radius: 50%;
+
+object-fit: cover;
+}
+
+.avatar-placeholder {
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #e5e7eb;
+
+color: #6b7280;
+
+font-size: 14px;
+font-weight: 600;
+}
+
+.user-info span {
+display: block;
+
+margin-bottom: 2px;
+
+font-size: 10px;
+color: #9ca3af;
+}
+
+.user-info strong {
+font-size: 13px;
+}
+
+.arrow {
+color: #c4c8ce;
+font-size: 18px;
+}
+
+/* ================= REASON ================= */
+
+.reason {
+padding: 15px 0 12px;
+}
+
+.field-label {
+display: block;
+
+margin-bottom: 5px;
+
+font-size: 10px;
+font-weight: 600;
+
+text-transform: uppercase;
+letter-spacing: 0.4px;
+
+color: #9ca3af;
+}
+
+.reason h3 {
+margin: 0;
+
+font-size: 14px;
+font-weight: 600;
+}
+
+.reason p {
+margin: 5px 0 0;
+
+font-size: 13px;
+line-height: 1.5;
+
+color: #6b7280;
+}
+
+/* ================= POST ================= */
+
+.reported-post {
+padding: 13px;
+
+border-radius: 8px;
+
+background: #f8fafc;
+}
+
+.post-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.post-date {
+font-size: 10px;
+color: #9ca3af;
+}
+
+.reported-post p {
+margin: 6px 0 0;
+
+font-size: 13px;
+line-height: 1.5;
+
+color: #4b5563;
+
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+
+overflow: hidden;
+}
+
+/* ================= ACTIONS ================= */
+
+.actions {
+display: flex;
+justify-content: flex-end;
+gap: 8px;
+
+margin-top: 15px;
+}
+
+.btn {
+border: none;
+
+padding: 8px 13px;
+
+border-radius: 7px;
+
+font-size: 12px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.2s;
+}
+
+.btn.delete {
+background: #fff1f2;
+color: #be123c;
+}
+
+.btn.delete:hover {
+background: #ffe4e6;
+}
+
+.btn.ban {
+background: #fee2e2;
+color: #b91c1c;
+}
+
+.btn.ban:hover {
+background: #fecaca;
+}
+
+.btn.ignore {
+background: #f3f4f6;
+color: #4b5563;
+}
+
+.btn.ignore:hover {
+background: #e5e7eb;
+}
+
+/* ================= RESOLVED ================= */
+
+.resolved {
+display: flex;
+justify-content: flex-end;
+gap: 4px;
+
+margin-top: 13px;
+
+font-size: 11px;
+color: #9ca3af;
+}
+
+/* ================= BANNED USERS ================= */
+
+.banned-users {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.banned-card {
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 14px 17px;
+
+background: white;
+
+border: 1px solid #e5e7eb;
+border-radius: 10px;
+}
+
+.banned-user-info {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.banned-user-info img,
+.large-avatar {
+width: 45px;
+height: 45px;
+
+border-radius: 50%;
+
+object-fit: cover;
+}
+
+.large-avatar {
+display: flex;
+align-items: center;
+justify-content: center;
+
+background: #e5e7eb;
+
+color: #6b7280;
+
+font-weight: 600;
+}
+
+.banned-user-info h3 {
+margin: 0 0 3px;
+
+font-size: 14px;
+}
+
+.banned-user-info span {
+font-size: 12px;
+color: #9ca3af;
+}
+
+.unban-btn {
+padding: 8px 14px;
+
+border: 1px solid #d1d5db;
+border-radius: 7px;
+
+background: white;
+
+color: #374151;
+
+font-size: 12px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition: 0.2s;
+}
+
+.unban-btn:hover {
+border-color: #2563eb;
+color: #2563eb;
+}
+
+/* ================= EMPTY ================= */
+
+.empty {
+padding: 55px 20px;
+
+text-align: center;
+
+background: white;
+
+border: 1px dashed #d1d5db;
+border-radius: 11px;
+}
+
+.empty-icon {
+width: 40px;
+height: 40px;
+
+margin: 0 auto 11px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: #ecfdf5;
+color: #059669;
+
+font-size: 16px;
+font-weight: 700;
+}
+
+.empty h3 {
+margin: 0;
+
+font-size: 15px;
+}
+
+.empty p {
+margin: 5px 0 0;
+
+font-size: 12px;
+
+color: #9ca3af;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 650px) {
+
+.admin-page {
+padding: 22px 12px;
+}
+
+.section-header {
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+}
+
+.section-header select {
+width: 100%;
+}
+
+.users {
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+}
+
+.arrow {
+display: none;
+}
+
+.actions {
+flex-direction: column;
+}
+
+.btn {
+width: 100%;
+}
+
+.report-header {
+align-items: flex-start;
+gap: 10px;
+}
+
+.banned-card {
+gap: 12px;
+}
+}

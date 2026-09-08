@@ -9,10 +9,14 @@ namespace ImigramAPI.Services
     {
         private readonly IFollowRepository _followRepository;
         private readonly IUserService _userService;
-        public FollowService(IFollowRepository followRepository, IUserService userService)
+        private readonly INotificationService _notificationService;
+        private readonly IChatService _chatService;
+        public FollowService(IFollowRepository followRepository, IUserService userService, INotificationService notificationService, IChatService chatService)
         {
             _followRepository = followRepository;
             _userService = userService;
+            _notificationService = notificationService;
+            _chatService = chatService;
         }
         public async Task Follow(string followerId, string followingId)
         {
@@ -22,12 +26,14 @@ namespace ImigramAPI.Services
                 FollowingId = followingId,
                 CreatedAt = DateTime.UtcNow
             };
+            await _chatService.CreateChat(followerId, followingId);
             await _followRepository.Create(follow);
         }
 
         public async Task<List<UserDto>> GetFollowers(string userId)
         {
             var follows = await _followRepository.GetFollolwers(userId);
+            Console.WriteLine(follows.Count);
             List<UserDto> result = new List<UserDto>();
             foreach (var follow in follows) {
                 var user = await _userService.GetUserById(follow.FollowerId);
@@ -41,8 +47,9 @@ namespace ImigramAPI.Services
                     LastName = user.LastName,
                     ProfileImage = user.ProfileImage,
                     Username = user.Username,
+                    IsBanned = user.IsBanned,
                 };
-                result.Add(dto);
+                result.Add(user);
             }
             return result;
             
@@ -66,7 +73,7 @@ namespace ImigramAPI.Services
                     ProfileImage = user.ProfileImage,
                     Username = user.Username,
                 };
-                result.Add(dto);
+                result.Add(user);
             }
             return result;
         }

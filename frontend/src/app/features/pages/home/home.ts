@@ -19,9 +19,13 @@ export class Home {             // ! ! ! ! ! ! !
   ngOnInit(){
     this.loadPosts()
   }
-
+  onPostDeleted(postId: string) {
+    this.posts.update(posts =>
+        posts.filter(post => post.id !== postId)
+    );
+}
   loadPosts(){
-    this.postService.getAllPosts().subscribe({
+    this.postService.getFeed().subscribe({
       next:(response) =>{
         console.log(response)
         

@@ -17,6 +17,7 @@ namespace ImigramAPI.Models
         public string Bio { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime DateOfBirth { get; set; }
+        public bool IsBanned { get; set; } = false;
         public string Country { get; set; }
         
     }

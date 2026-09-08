@@ -1,0 +1,347 @@
+<div class="admin-page">
+
+  <!-- Header -->
+
+  <div class="admin-header">
+    <div>
+      <h1>Admin Panel</h1>
+      <p>Manage reports and users.</p>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+
+  <div class="tabs">
+    <button
+      class="tab"
+      [class.active]="activeTab === 'reports'"
+      (click)="activeTab = 'reports'">
+      Reports
+      <span class="tab-count">{{ reports().length }}</span>
+    </button>
+
+
+<button
+  class="tab"
+  [class.active]="activeTab === 'banned'"
+  (click)="activeTab = 'banned'">
+  Banned Users
+</button>
+
+
+  </div>
+
+  <!-- ================= REPORTS ================= -->
+
+  <section *ngIf="activeTab === 'reports'" class="content">
+
+
+<div class="section-header">
+
+  <div>
+    <h2>Reports</h2>
+    <p>Review reported posts and take action.</p>
+  </div>
+
+  <select
+    [value]="selectedStatus"
+    (change)="selectedStatus = $any($event.target).value; filterReports()">
+
+    <option value="all">All reports</option>
+    <option value="Pending">Pending</option>
+    <option value="ActionTaken">Action taken</option>
+    <option value="Ignored">Ignored</option>
+
+  </select>
+
+</div>
+
+
+<!-- Reports -->
+<div class="reports">
+
+  <div
+    class="report-card"
+    *ngFor="let report of filteredReports()">
+
+    <!-- Report header -->
+    <div class="report-header">
+
+      <div class="report-meta">
+
+        <span class="report-label">
+          POST REPORT
+        </span>
+
+        <span
+          class="status"
+          [class.pending]="report.status === 'Pending'"
+          [class.action]="report.status === 'ActionTaken'"
+          [class.ignored]="report.status === 'Ignored'">
+
+          {{ report.status }}
+
+        </span>
+
+      </div>
+
+      <span class="date">
+        {{ report.createdAt | date:'dd.MM.yyyy. HH:mm' }}
+      </span>
+
+    </div>
+
+
+    <!-- Reporter / reported user -->
+    <div class="users">
+
+      <div class="user">
+
+        <img
+          *ngIf="report.reporter.profileImage"
+          [src]="'https://localhost:7109' + report.reporter.profileImage"
+          alt="Reporter">
+
+        <div
+          *ngIf="!report.reporter.profileImage"
+          class="avatar-placeholder">
+
+          {{ report.reporter.username.charAt(0).toUpperCase() }}
+
+        </div>
+
+        <div class="user-info">
+          <span>Reported by</span>
+          <strong>{{ report.reporter.username }}</strong>
+        </div>
+
+      </div>
+
+
+      <div class="arrow">
+        →
+      </div>
+
+
+      <div class="user">
+
+        <img
+          *ngIf="report.post.profileImage"
+          [src]="'https://localhost:7109' + report.post.profileImage"
+          alt="Reported user">
+
+        <div
+          *ngIf="!report.post.profileImage"
+          class="avatar-placeholder">
+
+          {{ report.post.username?.charAt(0)?.toUpperCase() }}
+
+        </div>
+
+        <div class="user-info">
+          <span>Reported user</span>
+          <strong>{{ report.post.username }}</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Reason -->
+    <div class="reason">
+
+      <span class="field-label">Reason</span>
+
+      <h3>{{ report.reason }}</h3>
+
+      <p *ngIf="report.description">
+        {{ report.description }}
+      </p>
+
+    </div>
+
+
+    <!-- Post -->
+    <div class="reported-post">
+
+      <div class="post-header">
+        <span class="field-label">Reported post</span>
+
+        <span class="post-date">
+          {{ report.post.createdAt | date:'dd.MM.yyyy.' }}
+        </span>
+      </div>
+
+      <p>
+        {{ report.post.content }}
+      </p>
+
+    </div>
+
+
+    <!-- Actions -->
+    <div
+      class="actions"
+      *ngIf="report.status === 'Pending'">
+    
+      <button
+        class="btn btn-view"
+        (click)="viewPost(report.post.id)">
+        <mat-icon>open_in_new</mat-icon>
+        View Post
+    </button>
+
+      <button
+        class="btn delete"
+        (click)="deletePost(report)">
+        <mat-icon>delete</mat-icon>
+        Delete Post
+
+      </button>
+
+      <button
+        class="btn ban"
+        (click)="deleteAndBan(report)">
+        <mat-icon>block</mat-icon>
+        Delete + Ban
+
+      </button>
+
+      <button
+        class="btn ignore"
+        (click)="ignoreReport(report)">
+        <mat-icon>cancel</mat-icon>
+        Ignore
+
+      </button>
+
+    </div>
+
+
+    <!-- Resolved information -->
+    <div
+      class="resolved"
+      *ngIf="report.status !== 'Pending'">
+
+      <span>
+        Resolved {{ report.resolvedAt | date:'dd.MM.yyyy. HH:mm' }}
+      </span>
+
+      <span *ngIf="report.resolvedBy">
+        by {{ report.resolvedBy.username }}
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <!-- Empty -->
+  <div
+    class="empty"
+    *ngIf="filteredReports().length === 0">
+
+    <div class="empty-icon">
+      ✓
+    </div>
+
+    <h3>No reports found</h3>
+
+    <p>
+      There are no reports matching the selected status.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+  <!-- ================= BANNED USERS ================= -->
+
+  <section
+    *ngIf="activeTab === 'banned'"
+    class="content">
+
+
+<div class="section-header">
+
+  <div>
+    <h2>Banned Users</h2>
+    <p>Manage users who are currently banned.</p>
+  </div>
+
+</div>
+
+
+<div class="banned-users">
+
+  <div
+    class="banned-card"
+    *ngFor="let user of bannedUsers()">
+
+    <div class="banned-user-info">
+
+      <img
+        *ngIf="user.profileImage"
+        [src]="'https://localhost:7109' + user.profileImage"
+        alt="Profile">
+
+      <div
+        *ngIf="!user.profileImage"
+        class="large-avatar">
+
+        {{ user.username?.charAt(0)?.toUpperCase() }}
+
+      </div>
+
+      <div>
+
+        <h3>
+          {{ user.username }}
+        </h3>
+
+        <span>
+          {{ user.email }}
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="unban-btn"
+      (click)="unbanUser(user)">
+
+      Unban
+
+    </button>
+
+  </div>
+
+
+  <div
+    class="empty"
+    *ngIf="bannedUsers().length === 0">
+
+    <div class="empty-icon">
+      ✓
+    </div>
+
+    <h3>No banned users</h3>
+
+    <p>
+      There are currently no banned users.
+    </p>
+
+  </div>
+
+</div>
+
+
+  </section>
+
+</div>

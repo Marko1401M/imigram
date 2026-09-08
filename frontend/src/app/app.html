@@ -204,7 +204,7 @@
             <mat-icon>notifications</mat-icon>
         </div>
 
-        <div class="toast-content">
+        <div class="toast-content" (click) = "openNotification()">
 
             <strong>Nova notifikacija</strong>
 
@@ -227,7 +227,8 @@
 }
 
 <div class="main-content">
-
+  <app-toast-action></app-toast-action>
+  <app-toast-notification></app-toast-notification>
   <router-outlet />
 </div>
 

@@ -50,6 +50,23 @@ namespace ImigramAPI.Controllers
 
             return Ok(result);
         }
-        
+        [Authorize]
+        [HttpDelete("{postId}")]
+        public async Task<IActionResult> DeletePost(string postId)
+        {   
+            await _postService.DeletePost(postId);
+
+            return Ok();
+        }
+        [Authorize]
+        [HttpGet("feed")]
+        public async Task<IActionResult> GetFeed()
+        {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null) return BadRequest();
+            var result = await _postService.GetFeed(userId);
+
+            return Ok(result);
+        }
     }
 }

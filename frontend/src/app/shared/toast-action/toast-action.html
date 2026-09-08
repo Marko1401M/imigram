@@ -1,0 +1,25 @@
+@if (toast(); as currentToast) {
+
+  <div class="action-toast" [class]="currentToast.type">
+
+    <div class="toast-icon">
+      @if (currentToast.type === 'success') {
+        ✓
+      } @else if (currentToast.type === 'error') {
+        ×
+      } @else {
+        i
+      }
+    </div>
+
+    <div class="toast-message">
+      {{ currentToast.message }}
+    </div>
+
+    <button class="close-btn" (click)="close()">
+      ×
+    </button>
+
+  </div>
+
+}

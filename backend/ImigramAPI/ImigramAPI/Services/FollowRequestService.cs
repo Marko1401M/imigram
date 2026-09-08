@@ -1,4 +1,5 @@
-﻿using ImigramAPI.Models;
+﻿using ImigramAPI.DTOs;
+using ImigramAPI.Models;
 using ImigramAPI.Repositories.Interfaces;
 using ImigramAPI.Services.Interfaces;
 
@@ -55,6 +56,10 @@ namespace ImigramAPI.Services
             };
             await _followRequestRepository.Create(request);
 
+            var user = await _userService.GetUserById(request.SenderId);
+
+            await _notificationService.Create(request.RecieverId, request.SenderId, "FollowReq", $"Korisnik {user.Username} Vam je poslao zahtev za praćenje!", request.RecieverId);
+
             return request;
         }
 
@@ -71,10 +76,28 @@ namespace ImigramAPI.Services
             
         }
 
-        public async Task<List<FollowRequest>> GetRequestsForUser(string userId)
+        public async Task<List<FollowRequestDto>> GetRequestsForUser(string userId)
         {
-            var result = await _followRequestRepository.GetByUserId(userId);
+            var requests = await _followRequestRepository.GetByUserId(userId);
+            List<FollowRequestDto> result = new List<FollowRequestDto>();
+            foreach(var req in requests)
+            {
+                var user = await _userService.GetUserById(req.SenderId);
+                var temp = new FollowRequestDto
+                {
+                    Id = req.Id,
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Username = user.LastName,
+                    CreatedAt = req.CreatedAt,
+                    ProfileImage = user.ProfileImage,
+                    RecieverId = req.RecieverId,
+                    SenderId = req.SenderId,
+                    Status = req.Status,
+                };
+                if(temp.Status == "Pending") result.Add(temp);
 
+            }
             return result;
         }
     }

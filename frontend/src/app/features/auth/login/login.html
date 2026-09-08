@@ -5,6 +5,10 @@
         <input [(ngModel)]="username" type="text" placeholder="Username">
 
         <input [(ngModel)]="password" type="password" placeholder="Lozinka">
+
+        <div *ngIf="errorMessage()" class="error-message">
+            {{ errorMessage() }}
+        </div>
         <button (click)="login()">Login</button>
 
         <a href="http://localhost:4200/register">

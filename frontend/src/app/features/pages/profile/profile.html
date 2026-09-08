@@ -25,6 +25,81 @@
 
         </div>
 
+         <div class="profile-stats">
+
+            <div
+                class="profile-stat"
+                (click)="showFollowers()">
+
+                <strong>{{ followers()?.length || 0 }}</strong>
+                <span>Pratilaca</span>
+
+            </div>
+
+            <div
+                class="profile-stat"
+                (click)="showFollowing()">
+
+                <strong>{{ followings()?.length || 0 }}</strong>
+                <span>Prati</span>
+
+            </div>
+
+        </div>
+
+        <div
+    class="profile-actions"
+    *ngIf="user() as currentUser">
+
+    <ng-container [ngSwitch]="followStatus()"
+                *ngIf="showMessageButton()"
+    >
+
+        <button
+            *ngSwitchCase="'None'"
+            class="follow-btn"
+            (click)="sendFollowRequest(currentUser.id)">
+            Zaprati
+        </button>
+
+        <button
+            *ngSwitchCase="'Pending'"
+            class="follow-btn pending"
+            disabled>
+            Zahtev poslat
+        </button>
+
+        <ng-container *ngSwitchCase="'incoming'">
+            <button
+                class="follow-btn"
+                (click)="acceptFollowRequest()">
+                Accept
+            </button>
+
+            <button
+                class="reject-btn"
+                (click)="rejectFollowRequest()">
+                Reject
+            </button>
+        </ng-container>
+
+        <button
+            *ngSwitchCase="'following'"
+            class="follow-btn following"
+            (click)="unfollow(currentUser.id)">
+            Following
+        </button>
+
+    </ng-container>
+
+    <button
+        *ngIf="showMessageButton()"
+        class="message-btn"
+        (click)="openChat(currentUser.id)">
+        Poruka
+    </button>
+</div>
+
     </div>
 
 
@@ -40,7 +115,9 @@
 
             <app-post-card
                 *ngFor="let post of posts()"
-                [post]="post">
+                [post]="post"
+                (postDeleted)="onPostDeleted($event)"
+                >
             </app-post-card>
 
         </div>

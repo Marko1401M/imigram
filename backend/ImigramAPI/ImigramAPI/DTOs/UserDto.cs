@@ -12,6 +12,7 @@ namespace ImigramAPI.DTOs
         public string ProfileImage { get; set; }
         public string Bio { get; set; }
         public DateTime CreatedAt { get; set; }
+        public bool IsBanned { get; set; }
         //public DateTime DateOfBirth { get; set; }
         //public string Country { get; set; }
     }

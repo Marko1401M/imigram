@@ -62,6 +62,9 @@ export class Navbar {
     this.notificationService
         .markAsRead(notification.id)
         .subscribe();
+    if(notification.type =="FollowReq") this.router.navigate(['/followers']);
+    else if(notification.type == "Follow") this.router.navigate(['/profile',notification?.senderId]);
+    else if(notification.postId) this.router.navigate(['/post-details',notification.postId])
   }
 
   logout(){

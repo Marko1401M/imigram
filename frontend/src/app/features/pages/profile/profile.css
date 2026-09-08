@@ -82,3 +82,114 @@
 
     color: #777;
 }
+
+.profile-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.profile-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.profile-stat strong {
+    font-size: 20px;
+}
+
+.profile-stat span {
+    font-size: 14px;
+    color: #777;
+}
+
+.profile-stat:hover span {
+    text-decoration: underline;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.follow-btn,
+.reject-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Follow / Accept */
+.follow-btn {
+    background-color: #1877f2;
+    color: white;
+}
+
+.follow-btn:hover {
+    background-color: #0d6efd;
+    transform: translateY(-1px);
+}
+
+/* Request sent */
+.follow-btn.pending {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: default;
+}
+
+.follow-btn.pending:hover {
+    transform: none;
+}
+
+/* Following */
+.follow-btn.following {
+    background-color: white;
+    color: #1877f2;
+    border: 1px solid #1877f2;
+}
+
+.follow-btn.following:hover {
+    background-color: #f0f6ff;
+}
+
+/* Reject */
+.reject-btn {
+    background-color: white;
+    color: #dc3545;
+    border: 1px solid #dc3545;
+}
+
+.reject-btn:hover {
+    background-color: #fff1f2;
+    transform: translateY(-1px);
+}
+
+/* Disabled */
+.follow-btn:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+
+.message-btn {
+    padding: 10px 20px;
+    border: 1px solid #2196f3;
+    border-radius: 8px;
+    background: white;
+    color: #2196f3;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.message-btn:hover {
+    background: #2196f3;
+    color: white;
+}

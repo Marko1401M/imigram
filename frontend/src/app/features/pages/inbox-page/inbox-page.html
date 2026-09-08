@@ -1,0 +1,156 @@
+<div class="inbox-page">
+
+    <div class="inbox-container">
+
+        <!-- LEFT: CHAT LIST -->
+        <aside class="chat-list">
+
+            <div class="chat-list-header">
+                <h2>Inbox</h2>
+            </div>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    placeholder="Pretraži razgovore..."
+                    [(ngModel)]="searchText">
+            </div>
+
+            <div class="chats">
+
+                <div
+                    class="chat-item"
+                    *ngFor="let chat of filteredChats()"
+                    [class.active]="selectedChat()?.id === chat.id"
+                    (click)="selectChat(chat)">
+
+                    <img
+                        class="chat-avatar"
+                        [src]="'https://localhost:7109' + chat.profileImage"
+                        alt="Profile image">
+
+                    <div class="chat-info">
+
+                        <div class="chat-top">
+                            <strong>
+                                {{ chat.firstName }} {{ chat.lastName }}
+                            </strong>
+
+                            <span class="chat-time">
+                                {{ chat.lastMessageDate | date:'HH:mm' }}
+                            </span>
+                        </div>
+
+                        <p>
+                            {{ chat.lastMessage }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    class="empty-chats"
+                    *ngIf="filteredChats().length === 0">
+
+                    <p>Nema razgovora.</p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- RIGHT: ACTIVE CHAT -->
+        <main class="chat-window">
+
+            <!-- NO CHAT SELECTED -->
+            <div
+                class="no-chat"
+                *ngIf="!selectedChat()">
+
+                <div class="no-chat-icon">
+                    💬
+                </div>
+
+                <h2>Vaše poruke</h2>
+
+                <p>
+                    Izaberite razgovor da biste počeli dopisivanje.
+                </p>
+
+            </div>
+
+
+            <!-- CHAT SELECTED -->
+            <ng-container *ngIf="selectedChat() as chat">
+
+                <!-- CHAT HEADER -->
+                <div class="chat-header">
+
+                    <img
+                        class="chat-header-avatar"
+                        [src]="'https://localhost:7109' + chat.profileImage"
+                        alt="Profile image">
+
+                    <div>
+                        <h3>
+                            {{ chat.firstName }} {{ chat.lastName }}
+                        </h3>
+
+                        <span>
+                            @{{ chat.username }}
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGES -->
+                <div class="messages" #messagesContainer>
+                    @for (message of messages(); track message.id) {
+                        <div
+                            class="message"
+                            [class.sent]="message.senderId === currentUserId"
+                            [class.received]="message.senderId !== currentUserId"
+                        >
+                            <div class="message-bubble">
+                                {{ message.content }}
+                            </div>
+
+                            <span class="message-time">
+                                {{ message.sentAt | date:'HH:mm' }}
+                            </span>
+                        </div>
+                    }
+                </div>
+
+
+                <!-- MESSAGE INPUT -->
+                <div class="message-input-container">
+
+                    <input
+                        type="text"
+                        placeholder="Napiši poruku..."
+                        [(ngModel)]="newMessage"
+                        (keydown.enter)="sendMessage()">
+
+                    <button
+                        class="send-btn"
+                        (click)="sendMessage()"
+                        [disabled]="!newMessage.trim()">
+
+                        ➤
+
+                    </button>
+
+                </div>
+
+            </ng-container>
+
+        </main>
+
+    </div>
+
+</div>

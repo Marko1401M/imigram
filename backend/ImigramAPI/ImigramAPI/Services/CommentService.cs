@@ -10,10 +10,16 @@ namespace ImigramAPI.Services
     {
         private readonly ICommentRepository _commentRepository;
         private readonly IUserRepository _userRepository;
-        public CommentService(ICommentRepository commentRepository, IUserRepository userRepository)
+        private readonly INotificationService _notificationService;
+        private readonly IPostService _postService;
+        private readonly IPostRepository _postRepository;
+        public CommentService(ICommentRepository commentRepository, IUserRepository userRepository, INotificationService notificationService, IPostService postService, IPostRepository postRepository )
         {
             _commentRepository = commentRepository;
             _userRepository = userRepository;
+            _notificationService = notificationService;
+            _postService = postService;
+            _postRepository = postRepository;
         }
         public async Task<Comment> AddComment(AddCommentDto dto)
         {
@@ -26,6 +32,9 @@ namespace ImigramAPI.Services
             };
             await _commentRepository.Create(comment);
 
+            var post = await _postRepository.GetById(dto.PostId);
+            var user = await _userRepository.GetById(dto.UserId);
+            await _notificationService.Create(post.UserId, dto.UserId, "Comment", $"Korisnik {user.Username} je komentarisao Vašu objavu!", post.Id, comment.Id);
             return comment;
         }
 

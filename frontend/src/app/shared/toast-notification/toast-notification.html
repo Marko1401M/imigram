@@ -1,0 +1,32 @@
+@if (notification(); as message) {
+
+  <div class="toast" (click)="openChat()">
+
+    <img
+      class="toast-avatar"
+      src="https://localhost:7109{{message.senderProfileImage}}"
+      [alt]="message.senderUsername"
+    >
+
+    <div class="toast-body">
+
+      <div class="toast-header">
+        <strong>{{ message.senderUsername }}</strong>
+
+        <button
+          class="close-btn"
+          (click)="close($event)"
+        >
+          ×
+        </button>
+      </div>
+
+      <p class="toast-message">
+        {{ message.content }}
+      </p>
+
+    </div>
+
+  </div>
+
+}

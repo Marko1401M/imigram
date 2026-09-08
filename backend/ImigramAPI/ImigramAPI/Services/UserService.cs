@@ -23,9 +23,32 @@ namespace ImigramAPI.Services
                 CreatedAt = user.CreatedAt,
                 Id = user.Id,
                 Email = user.Email,
-                ProfileImage = user.ProfileImage
+                ProfileImage = user.ProfileImage,
+                IsBanned = user.IsBanned,
             };
             return userDto;
+        }
+        public async Task<List<UserDto>> GetBannedUsers()
+        {
+            var users = await _userRepository.GetByBanStatus(true);
+            List<UserDto> list = new List<UserDto>();
+            foreach(var user in users)
+            {
+                var userDto = new UserDto
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Bio = user.Bio,
+                    Username = user.Username,
+                    CreatedAt = user.CreatedAt,
+                    Id = user.Id,
+                    Email = user.Email,
+                    ProfileImage = user.ProfileImage,
+                    IsBanned = user.IsBanned
+                };
+                list.Add(userDto);
+            }
+            return list;
         }
     }
 }

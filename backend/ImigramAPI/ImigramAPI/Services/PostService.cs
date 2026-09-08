@@ -13,13 +13,21 @@ namespace ImigramAPI.Services
         private readonly ILikeRepository _likeRepository;
         private readonly IWebHostEnvironment _environment;
         private readonly INotificationService _notificationService;
-        public PostService(IPostRepository postRepository, IWebHostEnvironment environment, IUserRepository userRepository, ILikeRepository likeRepository, INotificationService notificationService)
+        private readonly IFollowService _followService;
+        public PostService(IPostRepository postRepository,
+            IWebHostEnvironment environment,
+            IUserRepository userRepository,
+            ILikeRepository likeRepository,
+            INotificationService notificationService,
+            IFollowService followService
+            )
         {
             _postRepository = postRepository;
             _environment = environment;
             _userRepository = userRepository;
             _likeRepository = likeRepository;
             _notificationService = notificationService;
+            _followService = followService;
         }
 
         public async Task<Post> CreatePost(CreatePostDto dto, string userId)
@@ -83,7 +91,7 @@ namespace ImigramAPI.Services
             {
                 Id = id,
                 UserId = user.Id,
-                FullName = user.FirstName + user.LastName,
+                FullName = user.FirstName + " " + user.LastName,
                 Username = user.Username,
                 ProfileImage = user.ProfileImage,
                 Content = post.Content,
@@ -109,7 +117,7 @@ namespace ImigramAPI.Services
                 {
                     Id = post.Id,
                     UserId = user.Id,
-                    FullName = user.FirstName + user.LastName,
+                    FullName = user.FirstName + " " + user.LastName,
                     Username = user.Username,
                     ProfileImage = user.ProfileImage,
                     Content = post.Content,
@@ -136,7 +144,7 @@ namespace ImigramAPI.Services
                 {
                     Id = post.Id,
                     UserId = user.Id,
-                    FullName = user.FirstName + user.LastName,
+                    FullName = user.FirstName + " " + user.LastName,
                     Username = user.Username,
                     ProfileImage = user.ProfileImage,
                     Content = post.Content,
@@ -146,6 +154,44 @@ namespace ImigramAPI.Services
                     IsLiked = isLiked,
                     CommentsCount = post.CommentsCount,
                     Location = post.Location
+
+                };
+                list2.Add(postDto);
+            }
+            return list2;
+        }
+        public async Task DeletePost(string postId)
+        {
+            await _postRepository.Delete(postId);
+        }
+        public async Task<List<PostDto>> GetFeed(string userId)
+        {
+            
+            List<Post> list = await _postRepository.GetAll();
+            List<PostDto> list2 = new List<PostDto>();
+            foreach (var post in list)
+            {
+                if (post.IsDeleted) continue;
+                var user = await _userRepository.GetById(post.UserId);
+                bool isLiked = (await _likeRepository.GetLike(post.Id, userId)) != null;
+                var follow = await _followService.IsFollowing(userId, post.UserId);
+                
+                if (!follow) continue;
+                var postDto = new PostDto
+                {
+                    Id = post.Id,
+                    UserId = user.Id,
+                    FullName = user.FirstName + " " + user.LastName,
+                    Username = user.Username,
+                    ProfileImage = user.ProfileImage,
+                    Content = post.Content,
+                    Media = post.Media,
+                    CreatedAt = post.CreatedAt,
+                    LikesCount = post.LikedBy.Count,
+                    IsLiked = isLiked,
+                    CommentsCount = post.CommentsCount,
+                    Location = post.Location,
+                    IsDeleted = post.IsDeleted
 
                 };
                 list2.Add(postDto);

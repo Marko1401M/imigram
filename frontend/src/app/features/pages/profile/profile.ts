@@ -1,11 +1,14 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { UserService } from '../../../core/services/user-service';
 import { PostService } from '../../../core/services/post-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { PostAll } from '../../models/post-all';
 import { UserDto } from '../../models/userDto';
 import { PostCard } from '../../../shared/post-card/post-card';
 import { CommonModule } from '@angular/common';
+import { FollowService } from '../../../core/services/follow-service';
+import { form } from '@angular/forms/signals';
+import { ToastService } from '../../../core/services/toast-service';
 @Component({
   selector: 'app-profile',
   imports: [CommonModule, PostCard],
@@ -19,20 +22,101 @@ export class Profile {
 
   userId!: string
 
-  constructor(private route: ActivatedRoute, private userService: UserService, private postService: PostService){}
+  followers = signal([])
+
+  followings = signal<[]>([])
+
+  followStatus = signal('');
+
+  constructor(private route: ActivatedRoute, 
+    private userService: UserService, 
+    private postService: PostService, 
+    private followService: FollowService,
+    private router: Router,
+    private toastService: ToastService
+  ){}
 
   ngOnInit(): void{
     this.userId = this.route.snapshot.paramMap.get('id')!;
-
+    
     this.loadUser();
     
     this.loadPosts();
-  }
 
+    this.loadFollowingStatus();
+
+    this.loadFollowers();
+    
+    this.loadFollowings();
+
+    
+  }
+  onPostDeleted(postId: string) {
+    this.posts.update(posts =>
+        posts.filter(post => post.id !== postId)
+    );
+    this.toastService.success("Objava uspešno obrisana")
+}
+  showMessageButton() : boolean{
+    const userId = localStorage.getItem('userId');
+    if(this.userId && userId && this.userId != userId) return true;
+    return false;
+  }
+  openChat(receiverId: string){
+    this.router.navigate(['/inbox', receiverId])
+  }
+  showFollowers(){
+    const uId = localStorage.getItem('userId');
+    if(uId && uId == this.userId) this.router.navigate(['/followers'])
+  }
+  showFollowing(){
+    const uId = localStorage.getItem('userId');
+    if(uId && uId == this.userId) this.router.navigate(['/followers'])
+  }
+  loadFollowingStatus(){
+    
+    this.followService.getFollowStatus(this.userId).subscribe({
+      next: res=>{
+        console.log("Profil stranica!!!!")
+        console.log(res);
+        this.followStatus.set(res.result);
+        console.log(this.followStatus())
+      },
+      error: err=>{
+        console.error(err);
+      }
+    })
+    
+  }
+  unfollow(userId: string){
+
+  }
+  rejectFollowRequest(){
+    
+  }
+  acceptFollowRequest(){
+
+  }
+  sendFollowRequest(userId: string){
+    const formData = new FormData();
+    formData.append('RecieverId', userId);
+    this.followService.sendFollowRequest(formData).subscribe({
+      next: res=>{
+        console.log("Zapracen")
+        this.toastService.success("Uspešno poslat zahtev za praćenje!")
+        console.log(res)
+      },
+      error: err=>{
+        console.log("Error");
+      }
+
+    })
+    this.loadFollowingStatus();
+  }
   loadUser() : void{
     this.userService.getUser(this.userId).subscribe({
       next: res=>{
-        console.log(res);
+        
         this.user.set(res)
       },
       error: err=>{
@@ -40,11 +124,32 @@ export class Profile {
       }
     })
   }
-
+  loadFollowings(): void{
+    this.followService.getFollowings(this.userId).subscribe({
+      next: res=>{
+        
+        this.followings.set(res);
+      },
+      error: err=>{
+        console.error(err);
+      }
+    })
+  }
+  loadFollowers(): void{
+    this.followService.getFollowers(this.userId).subscribe({
+      next: res=>{
+        
+        this.followers.set(res);
+      },
+      error: err=>{
+        console.error(err);
+      }
+    })
+  }
   loadPosts(): void {
     this.postService.getPostsForUser(this.userId).subscribe({
       next: res=>{
-        console.log(res)
+        
         this.posts.set(res);
       },
       error: err=>{

@@ -110,6 +110,20 @@ builder.Services.AddScoped<IFollowService, FollowService>();
 
 builder.Services.AddScoped<IFollowRequestService, FollowRequestService>();
 
+builder.Services.AddScoped<IChatRepository, ChatRepository>();
+
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+
+builder.Services.AddScoped<IChatService, ChatService>();
+
+builder.Services.AddScoped<IMessageService, MessageService>();
+
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+
+builder.Services.AddScoped<IReportService, ReportService>();
+
+builder.Services.AddScoped<IAdminService, AdminService>();
+
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -133,7 +147,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
                 var path = context.HttpContext.Request.Path;
 
-                if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/hubs/notifications"))
+                if (!string.IsNullOrEmpty(accessToken) && (path.StartsWithSegments("/hubs/notifications") || path.StartsWithSegments("/hubs/chat")))
                 {
                     context.Token = accessToken;
                 }
@@ -181,5 +195,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapHub<NotificationHub>("/hubs/notifications");
+
+app.MapHub<ChatHub>("/hubs/chat");
 
 app.Run();

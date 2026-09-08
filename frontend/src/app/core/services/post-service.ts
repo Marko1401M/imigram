@@ -27,4 +27,10 @@ export class PostService {
     getPostsForUser(userId: string): Observable<PostAll[]>{
         return this.http.get<PostAll[]>(`${this.apiUrl}/all/${userId}`)
     }
+    deletePost(postId: string){
+        return this.http.delete(`${this.apiUrl}/${postId}`)
+    }
+    getFeed(): Observable<PostAll[]>{
+        return this.http.get<PostAll[]>(`${this.apiUrl}/feed`);
+    }
 }

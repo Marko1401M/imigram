@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { PostService } from '../../../core/services/post-service';
 import { Router } from '@angular/router';
+import { ToastService } from '../../../core/services/toast-service';
 @Component({
   selector: 'app-create-post',
   imports: [CommonModule, FormsModule],
@@ -18,7 +19,8 @@ export class CreatePost {
 
   constructor(
       private postService: PostService, 
-      private router: Router
+      private router: Router,
+      private toastService: ToastService
   ){}
 
   onFileSelected(event: any){
@@ -52,7 +54,7 @@ export class CreatePost {
             next: res => {
                 console.log("Uspešno kreiran post");
                 console.log(res)
-                
+                this.toastService.success("Uspešno objavljena objava!")
                 this.router.navigate([`/post-details/`, res.id])
             },
             error: err => {
