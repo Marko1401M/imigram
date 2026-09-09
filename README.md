@@ -31,7 +31,7 @@ Funkcionalnosti:
 
 ## Arhitektura
 
-![Dijagram Arhitekture](assets/images/WebArhitektura.svg)
+![Dijagram Arhitekture](assets/images/WebArhitektura2.svg)
 
 ## Strukutra projekta
 
