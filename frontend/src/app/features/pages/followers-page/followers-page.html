@@ -59,10 +59,12 @@
         <h2>Followers</h2>
 
         <div
+            (click)="openProfile($event, follower.id)"
             class="user-card"
             *ngFor="let follower of followers()">
-
+            
             <img
+                
                 [src]="'https://localhost:7109' + follower.profileImage"
                 alt="Profile image"
                 class="user-image">
@@ -96,7 +98,7 @@
 
         <div
             class="user-card"
-            
+            (click)="openProfile($event, user.id)"
             *ngFor="let user of following()">
 
             <img

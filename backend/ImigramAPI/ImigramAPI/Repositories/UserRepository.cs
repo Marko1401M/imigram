@@ -1,6 +1,7 @@
 ﻿using ImigramAPI.Database;
 using ImigramAPI.Models;
 using ImigramAPI.Repositories.Interfaces;
+using MongoDB.Bson;
 using MongoDB.Driver;
 namespace ImigramAPI.Repositories
 {
@@ -42,6 +43,41 @@ namespace ImigramAPI.Repositories
         public async Task<List<User>> GetByBanStatus(bool banned)
         {
             return await _context.Users.Find(u => u.IsBanned == banned).ToListAsync();
+        }
+        public async Task<List<User>> Search(string query)
+        {
+            var parts = query
+            .Trim()
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            var filters = new List<FilterDefinition<User>>();
+
+            foreach (var part in parts)
+            {
+                filters.Add(
+                    Builders<User>.Filter.Or(
+                        Builders<User>.Filter.Regex(
+                            x => x.Username,
+                            new BsonRegularExpression(part, "i")
+                        ),
+                        Builders<User>.Filter.Regex(
+                            x => x.FirstName,
+                            new BsonRegularExpression(part, "i")
+                        ),
+                        Builders<User>.Filter.Regex(
+                            x => x.LastName,
+                            new BsonRegularExpression(part, "i")
+                        )
+                    )
+                );
+            }
+
+            var filter = Builders<User>.Filter.And(filters);
+
+            return await _context.Users
+                .Find(filter)
+                .Limit(20)
+                .ToListAsync();
         }
     }
 }

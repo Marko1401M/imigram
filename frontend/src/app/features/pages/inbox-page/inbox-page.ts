@@ -6,7 +6,7 @@ import { signal } from '@angular/core';
 import { MessageDto } from '../../models/messageDto';
 import { MessageService } from '../../../core/services/message-service';
 import { ChatService } from '../../../core/services/chat-service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-inbox-page',
   imports: [CommonModule, FormsModule],
@@ -19,7 +19,7 @@ export class InboxPage {
   messages = signal<MessageDto[]>([])
 
   currentUserId = '';
-  searchText = '';
+  searchText = signal('')
   newMessage = '';
 
   currentChatId = '';
@@ -28,7 +28,7 @@ export class InboxPage {
   messagesContainer!: ElementRef;
 
   filteredChats = computed(()=>{
-    const search = this.searchText.toLowerCase();
+    const search = this.searchText().toLowerCase();
 
     return this.chats().filter(chat =>
       `${chat.firstName} ${chat.lastName}`
@@ -38,7 +38,7 @@ export class InboxPage {
       chat.username.toLowerCase().includes(search)
     )
   });
-
+  
   private scrollToBottom(): void{
     setTimeout(()=>{
       const element = this.messagesContainer?.nativeElement;
@@ -47,14 +47,23 @@ export class InboxPage {
     })
   }
 
-  constructor(private messageService: MessageService, private chatService: ChatService, private route: ActivatedRoute){
+  constructor(private messageService: MessageService, 
+    private chatService: ChatService, 
+    private route: ActivatedRoute,
+    private router: Router
+  ){
     
   }
+
+  openProfile(): void{
+    
+    this.router.navigate(['/profile', this.selectedChat()?.userId])
+  }
+
   ngOnInit(){
     this.currentChatId = this.route.snapshot.paramMap.get('id')!;
     this.currentUserId = localStorage.getItem('userId') || ' ';
-    this.loadChats()
-    
+    this.loadChats() 
     this.messageService.messageReceived$.subscribe(message => {
       const currentChat = this.selectedChat()
 
@@ -73,10 +82,13 @@ export class InboxPage {
     this.chatService.getAllChats().subscribe({
       next: res=>{
         this.chats.set(res)
+        console.log("CURRRENTENTENTNETN")
+        console.log(this.currentChatId)
         if(this.currentChatId != ''){
           this.chats().forEach(chat =>{
-          if(chat.id == this.currentChatId) {
+          if(chat.userId == this.currentChatId) {
             this.selectChat(chat);
+            console.log('TEST - =-= -= -= =- =-');
           }
           })
         }

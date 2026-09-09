@@ -11,5 +11,6 @@ namespace ImigramAPI.Repositories.Interfaces
         Task Update(User user);
         Task Delete(string id);
         Task<List<User>> GetByBanStatus(bool banned);
+        Task<List<User>> Search(string query);
     }
 }

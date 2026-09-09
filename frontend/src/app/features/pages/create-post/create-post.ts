@@ -16,7 +16,7 @@ export class CreatePost {
   content = '';
   location = '';
   selectedFiles: File[] = [];
-
+  previewUrls: string[] = [];
   constructor(
       private postService: PostService, 
       private router: Router,
@@ -27,6 +27,13 @@ export class CreatePost {
       this.selectedFiles = Array.from(
           event.target.files
       );
+      const input = event.target as HTMLInputElement;
+
+      if(!input.files) return;
+
+      this.previewUrls.forEach(url => URL.revokeObjectURL(url));
+
+      this.previewUrls = this.selectedFiles.map(file => URL.createObjectURL(file));
   }
 
   createPost(){

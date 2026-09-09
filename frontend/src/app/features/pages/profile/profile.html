@@ -3,10 +3,24 @@
     <!-- PROFILE HEADER -->
     <div class="profile-header" *ngIf="user() as currentUser">
 
-        <img
-            class="profile-image"
-            [src]="'https://localhost:7109' + currentUser.profileImage"
-            alt="Profile image">
+        <div class="profile-image-container" (click)="isOwner() ? fileInput.click() : null">
+            <img
+                class="profile-image"
+                [src]="'https://localhost:7109' + currentUser.profileImage"
+                alt="Profile image">
+
+            <div *ngIf="isOwner()" class="image-overlay">
+                <mat-icon>photo_camera</mat-icon>
+                <span>Promeni sliku</span>
+            </div>
+
+            <input
+                #fileInput
+                type="file"
+                accept="image/*"
+                hidden
+                (change)="onProfileImageSelected($event)">
+        </div>
 
         <div class="profile-info">
 

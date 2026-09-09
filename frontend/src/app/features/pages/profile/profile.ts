@@ -9,9 +9,10 @@ import { CommonModule } from '@angular/common';
 import { FollowService } from '../../../core/services/follow-service';
 import { form } from '@angular/forms/signals';
 import { ToastService } from '../../../core/services/toast-service';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-profile',
-  imports: [CommonModule, PostCard],
+  imports: [CommonModule, PostCard, MatIconModule],
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
@@ -48,8 +49,10 @@ export class Profile {
     this.loadFollowers();
     
     this.loadFollowings();
-
-    
+  }
+  isOwner(){
+    const loggedUser = localStorage.getItem('userId')
+    return loggedUser == this.userId;
   }
   onPostDeleted(postId: string) {
     this.posts.update(posts =>
@@ -104,6 +107,7 @@ export class Profile {
       next: res=>{
         console.log("Zapracen")
         this.toastService.success("Uspešno poslat zahtev za praćenje!")
+        this.loadFollowingStatus();
         console.log(res)
       },
       error: err=>{
@@ -111,7 +115,7 @@ export class Profile {
       }
 
     })
-    this.loadFollowingStatus();
+    
   }
   loadUser() : void{
     this.userService.getUser(this.userId).subscribe({
@@ -157,4 +161,36 @@ export class Profile {
       }
     })
   }
+  onProfileImageSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+
+    if (!input.files || input.files.length === 0) {
+        return;
+    }
+
+    const file = input.files[0];
+
+    if (!file.type.startsWith('image/')) {
+        alert('Please select an image.');
+        return;
+    }
+
+    if (file.size > 5 * 1024 * 1024) {
+        alert('Image must be smaller than 5 MB.');
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('Image', file);
+
+    this.userService.updateProfileImage(formData).subscribe({
+        next: (updatedUser) => {
+            this.user.set(updatedUser);
+        },
+        error: (err) => {
+            console.error('Error updating profile image:', err);
+            alert('Failed to update profile image.');
+        }
+    });
+}
 }

@@ -1,0 +1,217 @@
+.search-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.search-header {
+    margin-bottom: 25px;
+}
+
+.search-header h2 {
+    margin: 0 0 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+
+}
+
+.search-box:focus-within {
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
+}
+
+.search-box > mat-icon {
+    color: #777;
+    margin-right: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background: transparent;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+.clear-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+
+    cursor: pointer;
+    color: #777;
+
+
+}
+
+.clear-btn:hover {
+    background: #f0f0f0;
+}
+
+.clear-btn mat-icon {
+    font-size: 19px;
+    width: 19px;
+    height: 19px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+
+
+    padding: 14px 16px;
+
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease,
+                box-shadow 0.15s ease,
+                background 0.15s ease;
+
+}
+
+.user-card:hover {
+    background: #fafafa;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    flex-shrink: 0;
+}
+
+.user-info {
+    flex: 1;
+    margin-left: 14px;
+}
+
+.user-info h3 {
+    margin: 0 0 4px;
+
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user-info p {
+    margin: 0;
+
+    font-size: 14px;
+    color: #777;
+
+
+}
+
+.arrow {
+    color: #aaa;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 70px 20px;
+
+    color: #777;
+}
+
+.empty-state mat-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+    color: #aaa;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+
+    color: #444;
+    font-size: 19px;
+}
+
+.empty-state p {
+margin: 0;
+
+
+font-size: 14px;
+
+
+}
+
+@media (max-width: 600px) {
+
+
+.search-page {
+    padding: 20px 12px;
+}
+
+.search-header h2 {
+    font-size: 22px;
+}
+
+.user-card {
+    padding: 12px;
+}
+
+.profile-image {
+    width: 46px;
+    height: 46px;
+}
+
+}

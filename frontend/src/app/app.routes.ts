@@ -9,6 +9,7 @@ import { Profile } from './features/pages/profile/profile';
 import { FollowersPage } from './features/pages/followers-page/followers-page';
 import { InboxPage } from './features/pages/inbox-page/inbox-page';
 import { AdminPanel } from './features/pages/admin-panel/admin-panel';
+import { SearchPage } from './features/pages/search-page/search-page';
 
 export const routes: Routes = [
     {
@@ -61,6 +62,11 @@ export const routes: Routes = [
     {
         path:'admin-panel',
         component: AdminPanel,
+        canActivate:[authGuard]
+    },
+    {
+        path:'search',
+        component: SearchPage,
         canActivate:[authGuard]
     }
 ];

@@ -13,7 +13,10 @@
                 <input
                     type="text"
                     placeholder="Pretraži razgovore..."
-                    [(ngModel)]="searchText">
+                    [ngModel]="searchText()"
+                    (ngModelChange)="searchText.set($event)"
+                    
+                    >
             </div>
 
             <div class="chats">
@@ -87,7 +90,7 @@
             <ng-container *ngIf="selectedChat() as chat">
 
                 <!-- CHAT HEADER -->
-                <div class="chat-header">
+                <div (click)="openProfile()" class="chat-header">
 
                     <img
                         class="chat-header-avatar"

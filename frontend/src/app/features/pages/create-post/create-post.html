@@ -20,7 +20,15 @@
         (change)="onFileSelected($event)"
     >
 
+    <div class="media-preview" *ngIf="previewUrls.length > 0"> 
+        <div class="preview-item" *ngFor="let url of previewUrls; let i = index" > 
+            <img *ngIf="selectedFiles[i]?.type?.startsWith('image/')" [src]="url" alt="Preview" > 
+            <video *ngIf="selectedFiles[i]?.type?.startsWith('video/')" [src]="url" controls >
 
+            </video> 
+        </div> 
+    </div>
+        
     <button (click)="createPost()">
         Objavi
     </button>

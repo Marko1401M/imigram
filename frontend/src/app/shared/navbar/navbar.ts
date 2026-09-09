@@ -66,7 +66,11 @@ export class Navbar {
     else if(notification.type == "Follow") this.router.navigate(['/profile',notification?.senderId]);
     else if(notification.postId) this.router.navigate(['/post-details',notification.postId])
   }
-
+  isAdmin(){
+    const role = localStorage.getItem('role');
+    
+    return role === 'admin';
+  }
   logout(){
     localStorage.removeItem('token');
     this.router.navigate(['/login'])

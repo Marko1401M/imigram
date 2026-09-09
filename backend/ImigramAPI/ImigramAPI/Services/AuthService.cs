@@ -33,6 +33,7 @@ namespace ImigramAPI.Services
                 Token = token,
                 Username = user.Username,
                 Id = user.Id,
+                Role = user.Role,
             };
         }
 

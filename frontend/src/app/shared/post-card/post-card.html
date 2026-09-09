@@ -1,9 +1,10 @@
-@if(!post.isDeleted){ <div class="post-card">
+<div class="post-card">
     <div class="post-header" (click)="showPost()">
 
         <div class="user-info">
 
             <img
+                (click) = "openProfile($event)"
                 src="https://localhost:7109{{post.profileImage}}"
                 class="avatar"
                 alt="avatar">
@@ -125,4 +126,4 @@
 
 </div>
 
-</div>}
+</div>

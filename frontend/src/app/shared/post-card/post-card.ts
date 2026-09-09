@@ -4,7 +4,7 @@ import { Post } from '../../features/models/post';
 import { MediaType } from '../../features/models/mediaType';
 import { PostMedia } from '../../features/models/postMedia';
 import { PostAll } from '../../features/models/post-all';
-import { Router } from '@angular/router';
+import { Event, Router } from '@angular/router';
 import { LikeService } from '../../core/services/like-service';
 import { MatIconModule } from '@angular/material/icon';
 import { signal } from '@angular/core';
@@ -39,7 +39,7 @@ export class PostCard {
   isOwner(): boolean{
     return this.userId() === this.post.userId;
   }
-  toggleMenu(event: Event){
+  toggleMenu(event: MouseEvent){
     event.stopPropagation()
     this.menuOpen.update(value => !value)
   }
@@ -47,7 +47,10 @@ export class PostCard {
   editPost(){
     this.menuOpen.set(false);
   }
-
+  openProfile(event: MouseEvent){
+    event.stopPropagation()
+    this.router.navigate(['/profile',this.post.userId]);
+  }
   deletePost(){
     
     this.postService.deletePost(this.post.id).subscribe({

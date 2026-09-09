@@ -1,0 +1,82 @@
+<div class="search-page">
+
+
+<div class="search-header">
+    <h2>Search users</h2>
+
+    <div class="search-box">
+        <mat-icon>search</mat-icon>
+
+        <input
+            type="text"
+            placeholder="Search by username or name..."
+            [(ngModel)]="searchQuery"
+            (ngModelChange)="searchUsers()">
+
+        @if (searchQuery()) {
+            <button
+                class="clear-btn"
+                type="button"
+                (click)="clearSearch()">
+                <mat-icon>close</mat-icon>
+            </button>
+        }
+    </div>
+</div>
+
+<div class="search-results">
+
+    @if (loading()) {
+        <div class="loading">
+            <mat-spinner diameter="35"></mat-spinner>
+        </div>
+    }
+
+    @else if (!searchQuery().trim()) {
+        <div class="empty-state">
+            <mat-icon>person_search</mat-icon>
+            <h3>Find people</h3>
+            <p>Search for users by their username or name.</p>
+        </div>
+    }
+
+    @else if (users().length === 0) {
+        <div class="empty-state">
+            <mat-icon>person_off</mat-icon>
+            <h3>No users found</h3>
+            <p>Try searching for a different username or name.</p>
+        </div>
+    }
+
+    @else {
+        @for (user of users(); track user.id) {
+
+            <div
+                class="user-card"
+                (click)="openProfile(user.id)">
+
+                <img
+                    class="profile-image"
+                    [src]="'https://localhost:7109' + user.profileImage"
+                    [alt]="user.username">
+
+                <div class="user-info">
+                    <h3>{{ user.username }}</h3>
+
+                    <p>
+                        {{ user.firstName }} {{ user.lastName }}
+                    </p>
+                </div>
+
+                <mat-icon class="arrow">
+                    chevron_right
+                </mat-icon>
+
+            </div>
+
+        }
+    }
+
+</div>
+
+</div>

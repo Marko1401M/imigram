@@ -56,9 +56,16 @@ namespace ImigramAPI.Services
                     Type = file.ContentType.StartsWith("video") ? MediaType.Video : MediaType.Image
                 });
             }
-
-            await _postRepository.Create(post);
             
+            await _postRepository.Create(post);
+
+            var followers = await _followService.GetFollowers(userId);
+            var currentUser = await _userRepository.GetById(userId);
+
+            foreach (var follower in followers)
+            {
+                _notificationService.Create(follower.Id, userId, "NewPost", $"Korisnik {currentUser.Username} je postavio novu objavu!", post.Id);
+            }
             return post;
         }
         private async Task<string> SaveFile(IFormFile file)

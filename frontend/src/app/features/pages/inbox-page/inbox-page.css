@@ -188,7 +188,7 @@
 
 .chat-header {
     height: 70px;
-
+    cursor: pointer;
     display: flex;
     align-items: center;
 

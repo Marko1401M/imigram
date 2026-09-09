@@ -193,3 +193,50 @@
     background: #2196f3;
     color: white;
 }
+
+.profile-image-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.profile-image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay mat-icon {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.image-overlay span {
+    margin-top: 5px;
+    font-size: 13px;
+}

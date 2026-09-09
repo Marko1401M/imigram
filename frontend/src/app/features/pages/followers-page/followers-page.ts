@@ -4,6 +4,8 @@ import { FollowService } from '../../../core/services/follow-service';
 import { CommonModule, NgIf } from '@angular/common';
 import { UserDto } from '../../models/userDto';
 import { FollowRequest } from '../../models/followRequestDto';
+import { ToastService } from '../../../core/services/toast-service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-followers-page',
   imports: [CommonModule, NgIf],
@@ -14,7 +16,11 @@ export class FollowersPage {
   followRequests = signal<FollowRequest[]>([]);
   following = signal<UserDto[]>([])
   followers = signal<UserDto[]>([])
-  constructor(private followService: FollowService){}
+  constructor(
+    private followService: FollowService,
+    private toastService: ToastService,
+    private router: Router
+  ){}
 
   ngOnInit(){
     this.loadFollowRequests()
@@ -25,7 +31,7 @@ export class FollowersPage {
   rejectRequest(requestId: string){
     this.followService.declineFollowRequest(requestId).subscribe({
       next: res=>{
-
+        this.toastService.info("Zahtev za praćenje odbijen!")
         this.loadFollowRequests();
       },
       error: err=>{
@@ -33,11 +39,16 @@ export class FollowersPage {
       }
     })
   }
+  openProfile(event: MouseEvent, userId: string){
+    event.stopPropagation();
+    this.router.navigate(['/profile',userId]);
+  }
   acceptRequest(requestId: string){
     this.followService.acceptFollowRequest(requestId).subscribe({
       next: res=>{
         const userId = localStorage.getItem('userId')
         if(userId) this.loadFollowers(userId);
+        this.toastService.success("Zahtev za praćenje prihvaćen!")
         this.loadFollowRequests();
       },
       error: err=>{
