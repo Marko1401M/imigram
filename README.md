@@ -29,6 +29,10 @@ Funkcionalnosti:
 - **Real-time obaveštenja i poruke:** SignalR
 - **Autentifikacija:** JWT
 
+## Arhitektura
+
+![Dijagram Arhitekture](assets/images/WebArhitektura.svg)
+
 ## Strukutra projekta
 
 ```text
@@ -89,11 +93,36 @@ Imigram/
 
 ## Pokretanje
 
-### U napred potrebno:
+### Unapred potrebno:
 
 - .NET Core 10.0
 - Angular 22.0.8
 - MongoDB
+
+### Konfiguracija:
+
+Pre pokretanja backend-a neophodno je podesiti `appsetting.json` fajl sa odgovarajućim MongoDB konekcionim stringom i JWT podešavanjima
+```json
+{
+  "Jwt": {
+    "Key": "UNESITE_VAŠ_KLJUČ",
+    "Issuer": "ImigramAPI",
+    "Audience": "ImigramClient",
+    "ExpireMinutes": 120
+  },
+  "MongoDb": {
+    "ConnectionString": "UNESITE_VAŠ_KONEKCIONI_STRING",
+    "Database": "ImigramDB"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
 
 ### Pokretanje backenda:
 ```shell
