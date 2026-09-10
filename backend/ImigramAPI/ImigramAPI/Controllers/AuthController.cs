@@ -20,9 +20,9 @@ namespace ImigramAPI.Controllers
         public async Task<IActionResult> Register([FromForm] RegisterDto dto)
         {
             var result = await _authService.Register(dto);
-            if (!result)
-                return BadRequest("Greska");
-            return Ok();
+
+            if (result == "Ok") return Ok();
+            return BadRequest(result);
         }
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)

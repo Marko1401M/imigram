@@ -46,7 +46,10 @@
             type="file"
             (change)="onFileSelected($event)">
 
-
+        <div *ngIf="errorMessage()" class="error-message">
+            {{ errorMessage() }}
+        </div>
+        
         <button (click)="register()">
             Registruj se
         </button>

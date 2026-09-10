@@ -37,12 +37,14 @@ namespace ImigramAPI.Services
             };
         }
 
-        public async Task<bool> Register(RegisterDto registerDto)
+        public async Task<string> Register(RegisterDto registerDto)
         {
-            var userExists = await _userRepository.GetByEmail(registerDto.Email);
+            var emailExists = await _userRepository.GetByEmail(registerDto.Email);
 
-            if (userExists != null)
-                return false;
+            if (emailExists != null)
+                return "Email taken";
+            var usernameExists = await _userRepository.GetByUsername(registerDto.Username);
+            if (usernameExists != null) return "Username taken";
 
             var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/users");
 
@@ -70,7 +72,7 @@ namespace ImigramAPI.Services
                 LastName = registerDto.LastName
             };
             _userRepository.Create(user);
-            return true;
+            return "Ok";
         }
     }
 }
