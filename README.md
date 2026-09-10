@@ -148,3 +148,96 @@ Backend će raditi na:
 Frontend će raditi na:
 - http://localhost:4200/
 
+## API Dokumentacija
+Backend api je implementiran korišćenjem ASP .NET Core Web API-ja.
+
+API koristi JWT auth za zaštićene endpoint-e.
+
+`https://localhost:7109/swagger/index.html`
+
+### Authentication
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Auth/register`| Registracija korisnika | Ne |
+| POST   | `api/Auth/login`   | Prijava korisnika | Ne |
+
+### Users
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| GET   | `api/User/{userId}`| Dohvatanje korisnika po ID | Da |
+| GET   | `api/User/search`| Pretraga korisnika po query-u | Da |
+| PUT   | `api/User/update/profile-image`| Ažuriranje profile slike korisnika | Da |
+
+### Posts
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Post`| Kreiranje nove objave | Da |
+| GET   | `api/Post`| Dohvatanje svih objava | Da |
+| GET   | `api/Post/{id}`| Dohvatanje objave po ID | Da |
+| GET   | `api/Post/all/{userId}`| Dohvatanje svih objava jednog korisnika po ID korisnika | Da |
+| GET   | `api/Post/feed`| Dohvatanje svih objava za feed korisnika | Da |
+| DELETE   | `api/Post/{postId}`| Brisanje objave po ID | Da |
+
+### Follow
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Follow/send_request`| Slanje zahteva za praćenje | Da |
+| POST   | `api/Follow/accept_request/{requestId}`| Prihvatanje zahteva za pracenje | Da |
+| POST   | `api/Follow/decline_request/{requestId}`| Odbijanje zahteva za pracenje | Da |
+| GET   | `api/Follow/followings/{userId}`| Dohvatanje svih korisnika koje korisnik `userId` prati | Da |
+| GET   | `api/Follow/followers/{userId}`| Dohvatanje svih pratilaca korisnika `userId` | Da |
+| GET   | `api/Follow/follow_request`| Dohvatanje svih zahteva za praćenje prijavljenog korisnika | Da |
+| POST   | `api/Follow/follow_status/{userId}`| Dohvatanje statusa pracenja izmedju prijavljenog korisnika i korisnika `userId` | Da |
+
+
+### Admin
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Admin/ban/{userId}`| Banovanje korisnika `userId` | Da |
+| POST   | `api/Admin/unban/{userId}`| Uklanjanje ban-a korisnika `userId` | Da |
+| GET   | `api/Admin/`| Dohvatanje svih banovanih korisnika | Da |
+| DELETE   | `api/Admin/{postId}`| Brisanje objave `postId` | Da |
+
+### Chat
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| GET   | `api/Chat`| Dohvatanje svih chat-ova prijavljenog korisnika | Da |
+| GET   | `api/Chat/{chatId}`| Dohvatanje chat-a `chatId` | Da |
+| GET   | `api/Chat/with/{userId}`| Dohvatanje chat-a izmedju prijavljenog korisnika i korisnika `userId` | Da |
+
+### Comment
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Comment`| Kreiranje novog komentara | Da |
+| GET   | `api/Comment/{commentId}`| Dohvatanje komentara `commentId` | Da |
+| GET   | `api/Comment/all/{postId}`| Dohvatanje svih komentara na objavi `postId` | Da |
+
+### Like
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Like`| Kreiranje novog like-a | Da |
+| GET   | `api/Like/{postId}`| Dohvatanje svih like-ova za objavu `postId`| Da |
+| GET   | `api/Like/check-like/{postId}`| Provera da li je prijavljen korisnik like-ova objavu `postId` | Da |
+| DELETE   | `api/Like/{postId}`| Brisanje like-a prijavljenog korisnika na objavi `postId` | Da |
+
+### Message 
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| GET   | `api/Message/{chatId}`| Dohvatanje svih poruka iz chat-a `chatId` | Da |
+| PUT   | `api/Message/{messageId}/read`| Obelezavanje poruke `messageId` kao procitane | Da |
+
+### Notification
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Notification/read/{notificationId}`| Obelezavanje obavestenja `notificationId` kao procitano | Da |
+| GET   | `api/Notification`| Dohvatanje svih obavestenja iz za prijavljenog korisnika | Da |
+
+
+### Report
+| Method | Endpoint | Opis | Auth |
+|--------|----------|------|------|
+| POST   | `api/Report`| Kreiranje prijave za objavu | Da |
+| POST   | `api/Report/get/all`| Dohvatanje svih prijava | Da |
+| GET   | `api/Report/get/all/{status}`| Dohvatanje svih prijava za objavu po statusu `status` | Da |
+| GET   | `api/Report/{id}`| Dohvatanje prijave `id` | Da |
+
