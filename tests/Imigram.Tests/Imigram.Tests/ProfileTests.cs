@@ -6,5 +6,6 @@ namespace Imigram.Tests
 {
     internal class ProfileTests
     {
+
     }
 }
