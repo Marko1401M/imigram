@@ -1,11 +1,11 @@
 <div class="followers-page">
 
-    <h1>Connections</h1>
+    <h1>Konekcije</h1>
 
     <!-- REQUESTS -->
     <section class="section">
 
-        <h2>Follow Requests</h2>
+        <h2>Zahtevi za praćenje</h2>
 
         <div
             class="user-card"
@@ -31,13 +31,13 @@
                 <button
                     class="accept-btn"
                     (click)="acceptRequest(request.id)">
-                    Accept
+                    Prihvati
                 </button>
 
                 <button
                     class="reject-btn"
                     (click)="rejectRequest(request.id)">
-                    Reject
+                    Odbij
                 </button>
 
             </div>
@@ -47,7 +47,7 @@
         <p
             *ngIf="followRequests().length === 0"
             class="empty">
-            No follow requests.
+            Nema zahteva za praćenje.
         </p>
 
     </section>
@@ -56,7 +56,7 @@
     <!-- FOLLOWERS -->
     <section class="section">
 
-        <h2>Followers</h2>
+        <h2>Pratioci</h2>
 
         <div
             (click)="openProfile($event, follower.id)"
@@ -85,7 +85,7 @@
         <p
             *ngIf="followers().length === 0"
             class="empty">
-            You don't have any followers yet.
+            Još uvek Vas niko ne prati.
         </p>
 
     </section>
@@ -94,7 +94,7 @@
     <!-- FOLLOWING -->
     <section class="section">
 
-        <h2>Following</h2>
+        <h2>Pratim</h2>
 
         <div
             class="user-card"
@@ -120,7 +120,7 @@
             <button
                 class="following-btn"
                 (click)="unfollow(user.id)">
-                Following
+                Pratim
             </button>
 
         </div>
@@ -128,7 +128,7 @@
         <p
             *ngIf="following().length === 0"
             class="empty">
-            You are not following anyone yet.
+            Još uvek nikoga ne pratite.
         </p>
 
     </section>

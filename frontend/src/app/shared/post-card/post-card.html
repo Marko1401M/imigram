@@ -46,7 +46,7 @@
                      Delete
                 </button>
             } @else {
-                <button (click)="reportPost()">
+                <button (click)="openReportPanel($event)">
                     <mat-icon>report</mat-icon>
                     Report
                 </button>
@@ -95,7 +95,7 @@
     <div class="stats">
 
         <mat-icon>favorite</mat-icon>
-        {{ post.likesCount }}
+        <span class="like-count">{{ post.likesCount }}</span>
 
         <span>
             <mat-icon>comment</mat-icon>
@@ -112,12 +112,12 @@
             </mat-icon>
         </button>
 
-        <button>
+        <button (click)="openPost($event)">
             <mat-icon>comment</mat-icon>
             Comment
         </button>
 
-        <button>
+        <button (click)="copyLink()">
             <mat-icon>share</mat-icon>
             Share
         </button>
@@ -125,5 +125,75 @@
     </div>
 
 </div>
+
+@if (reportPanelOpen()) {
+    <div class="report-overlay" (click)="closeReportPanel($event)">
+        <div class="report-panel" (click)="$event.stopPropagation()">
+
+            <h3>Report Post</h3>
+
+            <label for="reportReason">Reason</label>
+
+            <select
+                id="reportReason"
+                [(ngModel)]="reportReason">
+
+                <option value="" disabled>
+                    Select a reason
+                </option>
+
+                <option value="Spam">
+                    Spam
+                </option>
+
+                <option value="Neprimeran sadržaj">
+                    Neprimeran sadržaj
+                </option>
+
+                <option value="Mlatretiranje">
+                    Maltretiranje
+                </option>
+
+                <option value="Nasilje">
+                    Nasilje
+                </option>
+
+                <option value="Drugo">
+                    Drugo
+                </option>
+
+            </select>
+
+            <label for="reportDescription">
+                Opis
+            </label>
+
+            <textarea
+                id="reportDescription"
+                [(ngModel)]="reportDescription"
+                placeholder="Describe the problem..."
+                rows="4">
+            </textarea>
+
+            <div class="report-actions">
+
+                <button
+                    class="cancel-btn"
+                    (click)="closeReportPanel($event)">
+                    Cancel
+                </button>
+
+                <button
+                    class="report-btn"
+                   
+                    (click)="submitReport($event)">
+                    Report
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+}
 
 </div>

@@ -73,6 +73,8 @@ export class Navbar {
   }
   logout(){
     localStorage.removeItem('token');
+    localStorage.removeItem('userId');
+    //localStorage.removeItem('username');
     this.router.navigate(['/login'])
   }
 }

@@ -73,6 +73,13 @@ export class PostDetails implements OnInit {
   this.commentService.addComment(formData).subscribe({
     next: (res) =>{
       this.loadComments();
+      if(this.post() != null) {
+        const updatedPost = this.post();
+        if(updatedPost){
+          updatedPost.commentsCount += 1;
+          this.post.set(updatedPost);
+        }
+      }
     },
     error: err=>{
       console.error("Greska")

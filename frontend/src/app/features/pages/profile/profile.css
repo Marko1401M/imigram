@@ -1,5 +1,5 @@
 .profile-page {
-    width: 700px;
+    width: 800px;
     margin: 40px auto;
 }
 
@@ -201,6 +201,7 @@
     cursor: pointer;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .profile-image {

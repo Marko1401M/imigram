@@ -1,12 +1,14 @@
 <div class="create-post">
 
     <textarea
+        id="content-input"
         [(ngModel)]="content"
         placeholder="Napiši nešto..."
     ></textarea>
 
 
     <input
+        id="location-input"
         type="text"
         [(ngModel)]="location"
         placeholder="Lokacija"
@@ -29,7 +31,7 @@
         </div> 
     </div>
         
-    <button (click)="createPost()">
+    <button id="create-post-button" (click)="createPost()">
         Objavi
     </button>
 

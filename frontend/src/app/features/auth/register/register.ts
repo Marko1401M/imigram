@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [FormsModule, RouterLink, CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './register.html',
   styleUrl: './register.css',
 })
@@ -49,7 +49,10 @@ export class Register {
       return;
 
     }
-
+    if(this.password != this.confirmPassword){
+      this.errorMessage.set("Šifre moraju da se poklapaju!");
+      return;
+    }
     if(!this.emailRegex.test(this.email)){
       this.errorMessage.set("Email nije validnog formata.")
       return;
@@ -87,8 +90,10 @@ export class Register {
         this.router.navigate(['/login'])
       },
       error:(err) => {
-        this.toastService.error(err.error)
-        this.errorMessage.set('Pogrešno korisničko ime ili lozinka.')
+        //this.toastService.error(err.error)
+        if(err.error.includes("Username")) this.errorMessage.set("Korisničko ime je zauzeto.")
+        else if(err.error.includes("Email")) this.errorMessage.set("Email je zauzet.")
+        else this.errorMessage.set("Došlo je do greške.")
       }
     })
   }

@@ -7,50 +7,57 @@
 
 
         <input 
+            id="username"
             type="text"
             placeholder="Username"
             [(ngModel)]="username">
 
 
         <input 
+            id="email"
             type="email"
             placeholder="Email"
             [(ngModel)]="email">
 
 
         <input 
+            id="password"
             type="password"
             placeholder="Lozinka"
             [(ngModel)]="password">
 
 
         <input 
+            id="confirm-password"
             type="password"
             placeholder="Potvrdi lozinku"
             [(ngModel)]="confirmPassword">
 
 
         <input 
+            id="firstName"
             type="text"
             placeholder="Ime"
             [(ngModel)]="firstName">
 
 
         <input 
+            id="lastName"
             type="text"
             placeholder="Prezime"
             [(ngModel)]="lastName">
 
 
         <input 
+            id="img"
             type="file"
             (change)="onFileSelected($event)">
 
         <div *ngIf="errorMessage()" class="error-message">
             {{ errorMessage() }}
         </div>
-        
-        <button (click)="register()">
+
+        <button id="register-button" (click)="register()">
             Registruj se
         </button>
 

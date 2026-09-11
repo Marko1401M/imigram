@@ -295,3 +295,84 @@
 .dropdown-menu .danger:hover {
     background: #fff0f0;
 }
+
+.report-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.report-panel {
+    width: 400px;
+
+    background: white;
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.report-panel h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.report-panel label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.report-panel select,
+.report-panel textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px;
+    margin-bottom: 16px;
+
+    border: 1px solid #ccc;
+    border-radius: 7px;
+
+    font-family: inherit;
+}
+
+.report-panel textarea {
+    resize: vertical;
+}
+
+.report-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cancel-btn,
+.report-btn {
+    padding: 9px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: #eee;
+}
+
+.report-btn {
+    background: #1877f2;
+    color: white;
+}
+
+.report-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

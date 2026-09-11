@@ -12,10 +12,12 @@ import { PostService } from '../../core/services/post-service';
 import { output } from '@angular/core';
 import { ReportService } from '../../core/services/report-service';
 import { form } from '@angular/forms/signals';
+import { ToastService } from '../../core/services/toast-service';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-post-card',
   standalone: true,
-  imports: [CommonModule, MatIconModule],
+  imports: [CommonModule, MatIconModule, FormsModule],
   templateUrl: './post-card.html',
   styleUrl: './post-card.css',
 })
@@ -28,10 +30,20 @@ export class PostCard {
 
   menuOpen = signal(false);
 
+  reportPanelOpen = signal(false);
+
+  reportReason = '';
+  reportDescription = '';
+
   @Output() postDeleted = new EventEmitter<string>()
 
   private userId = signal<string | null>(null)
-  constructor(private router: Router, private likeService: LikeService, private postService: PostService, private reportService: ReportService){}
+  constructor(private router: Router, 
+    private likeService: LikeService, 
+    private postService: PostService, 
+    private reportService: ReportService,
+    private toastService: ToastService
+  ){}
 
   ngOnInit(){
     this.userId.set(localStorage.getItem('userId'))
@@ -39,11 +51,61 @@ export class PostCard {
   isOwner(): boolean{
     return this.userId() === this.post.userId;
   }
+  openReportPanel(event: MouseEvent) {
+    event.stopPropagation();
+
+    this.menuOpen.set(false);
+    this.reportPanelOpen.set(true);
+}
+
+closeReportPanel(event?: MouseEvent) {
+    event?.stopPropagation();
+
+    this.reportPanelOpen.set(false);
+    this.reportReason = '';
+    this.reportDescription = '';
+}
+
+submitReport(event: MouseEvent) {
+    event.stopPropagation();
+
+    if (!this.reportReason) {
+        return;
+    }
+
+    const report = {
+        postId: this.post.id,
+        reason: this.reportReason,
+        description: this.reportDescription
+    };
+
+    const formData = new FormData();
+    
+    formData.append('ReporterId', localStorage.getItem('userId') || "");
+    formData.append('PostId', this.post.id);
+    formData.append('ReportedUserId', this.post.userId);
+    formData.append('Reason', report.reason);
+    formData.append('Description', report.description);
+    this.reportService.createReport(formData).subscribe({
+      next: res=>{
+        console.log("Uspesan report!")
+        this.toastService.success("Prijava uspešno poslata!")
+        this.closeReportPanel();
+      },
+      error: err=>{
+        this.toastService.error("Došlo je do greške.")
+        console.error(err);
+      }
+    })
+}
   toggleMenu(event: MouseEvent){
     event.stopPropagation()
     this.menuOpen.update(value => !value)
   }
-
+  openPost(event: MouseEvent){
+    event.stopPropagation();
+    this.router.navigate(['/post-details',this.post.id])
+  }
   editPost(){
     this.menuOpen.set(false);
   }
@@ -87,6 +149,7 @@ export class PostCard {
     this.menuOpen.set(false)
 
     navigator.clipboard.writeText(window.location.href)
+    this.toastService.info("Link kopiran.")
   }
 
 

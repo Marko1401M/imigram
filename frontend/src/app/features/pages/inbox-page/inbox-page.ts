@@ -86,7 +86,7 @@ export class InboxPage {
         console.log(this.currentChatId)
         if(this.currentChatId != ''){
           this.chats().forEach(chat =>{
-          if(chat.userId == this.currentChatId) {
+          if(chat.id == this.currentChatId) {
             this.selectChat(chat);
             console.log('TEST - =-= -= -= =- =-');
           }

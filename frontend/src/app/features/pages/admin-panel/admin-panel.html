@@ -5,7 +5,7 @@
   <div class="admin-header">
     <div>
       <h1>Admin Panel</h1>
-      <p>Manage reports and users.</p>
+      <p>Upravljanje prijavama i korisnicima.</p>
     </div>
   </div>
 
@@ -16,7 +16,7 @@
       class="tab"
       [class.active]="activeTab === 'reports'"
       (click)="activeTab = 'reports'">
-      Reports
+      Prijave
       <span class="tab-count">{{ reports().length }}</span>
     </button>
 
@@ -25,7 +25,7 @@
   class="tab"
   [class.active]="activeTab === 'banned'"
   (click)="activeTab = 'banned'">
-  Banned Users
+  Banovani korisnici
 </button>
 
 
@@ -39,8 +39,8 @@
 <div class="section-header">
 
   <div>
-    <h2>Reports</h2>
-    <p>Review reported posts and take action.</p>
+    <h2>Prijave</h2>
+    <p>Pregledaj prijave i reguliši ih.</p>
   </div>
 
   <select
@@ -111,7 +111,7 @@
         </div>
 
         <div class="user-info">
-          <span>Reported by</span>
+          <span>Prijavio</span>
           <strong>{{ report.reporter.username }}</strong>
         </div>
 
@@ -139,7 +139,7 @@
         </div>
 
         <div class="user-info">
-          <span>Reported user</span>
+          <span>Prijavljeni korisnik</span>
           <strong>{{ report.post.username }}</strong>
         </div>
 
@@ -151,7 +151,7 @@
     <!-- Reason -->
     <div class="reason">
 
-      <span class="field-label">Reason</span>
+      <span class="field-label">Razlog</span>
 
       <h3>{{ report.reason }}</h3>
 
@@ -166,7 +166,7 @@
     <div class="reported-post">
 
       <div class="post-header">
-        <span class="field-label">Reported post</span>
+        <span class="field-label">Prijavljena objava</span>
 
         <span class="post-date">
           {{ report.post.createdAt | date:'dd.MM.yyyy.' }}
@@ -189,14 +189,14 @@
         class="btn btn-view"
         (click)="viewPost(report.post.id)">
         <mat-icon>open_in_new</mat-icon>
-        View Post
+        Pogledaj Objavu
     </button>
 
       <button
         class="btn delete"
         (click)="deletePost(report)">
         <mat-icon>delete</mat-icon>
-        Delete Post
+        Obriši Objavu
 
       </button>
 
@@ -204,7 +204,7 @@
         class="btn ban"
         (click)="deleteAndBan(report)">
         <mat-icon>block</mat-icon>
-        Delete + Ban
+        Obriši + Banuj
 
       </button>
 
@@ -212,7 +212,7 @@
         class="btn ignore"
         (click)="ignoreReport(report)">
         <mat-icon>cancel</mat-icon>
-        Ignore
+        Ignoriši
 
       </button>
 
@@ -225,11 +225,11 @@
       *ngIf="report.status !== 'Pending'">
 
       <span>
-        Resolved {{ report.resolvedAt | date:'dd.MM.yyyy. HH:mm' }}
+        Rešeno {{ report.resolvedAt | date:'dd.MM.yyyy. HH:mm' }}
       </span>
 
       <span *ngIf="report.resolvedBy">
-        by {{ report.resolvedBy.username }}
+        od strane: {{ report.resolvedBy.username }}
       </span>
 
     </div>
@@ -246,10 +246,10 @@
       ✓
     </div>
 
-    <h3>No reports found</h3>
+    <h3>Nema prijava</h3>
 
     <p>
-      There are no reports matching the selected status.
+      Nema prijava za odabran status.
     </p>
 
   </div>
@@ -269,8 +269,8 @@
 <div class="section-header">
 
   <div>
-    <h2>Banned Users</h2>
-    <p>Manage users who are currently banned.</p>
+    <h2>Banovani korisnici</h2>
+    <p>Upravljaj trenutno banovanim korisnicima.</p>
   </div>
 
 </div>
@@ -331,10 +331,10 @@
       ✓
     </div>
 
-    <h3>No banned users</h3>
+    <h3>Nema banovanih korisnika</h3>
 
     <p>
-      There are currently no banned users.
+      Trenutno nema korisnika koji su banovani.
     </p>
 
   </div>
