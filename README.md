@@ -6,6 +6,25 @@
 [![SignalR](https://img.shields.io/badge/SignalR-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet/signalr)
 
 Seminarski rad iz predmeta Web Programiranje 2
+
+## Sadržaj
+
+- [Opis Projekta](#opis-projekta)
+- [Tehnologije](#tehnologije)
+- [Arhitektura](#arhitektura)
+- [Struktura Projekta](#struktura-projekta)
+- [Pokretanje](#pokretanje)
+  - [Unapred potrebno](#unapred-potrebno)
+  - [Kloniranje repozitorijuma](#kloniranje-repozitorijuma)
+  - [Konfiguracija](#konfiguracija)
+  - [Pokretanje backenda](#pokretanje-backenda)
+  - [Pokretanje frontenda](#pokretanje-frontenda)
+  - [Dostupnost aplikacije](#dostupnost-aplikacije)
+- [API Dokumentacija](#api-dokumentacija)
+- [Autentifikacija i autorizacija](#autentifikacija-i-autorizacija)
+- [Real-time komunikacija](#real-time-komunikacija)
+- [Izgled aplikacije](#izgled-aplikacije)
+- [Testiranje](#testiranje)
 ## Opis projekta
 
 Web aplikacija koja predstavlja društvenu mrežu i omogućava korisnicima da se povezuju, dele objave i komuniciraju sa drugim korisnicima.
@@ -98,6 +117,12 @@ Imigram/
 - .NET Core 10.0
 - Angular 22.0.8
 - MongoDB
+
+### Kloniranje repozitorijuma
+
+```bash
+  git clone https://github.com/Marko1401M/imigram.git
+ ```
 
 ### Konfiguracija:
 
@@ -244,14 +269,14 @@ Detaljnija dokumentacija dostupna je na: `https://localhost:7109/swagger/index.h
 ## Autentifikacija i autorizacija
 Za autentifikaciju korisnika koristi se JWT (JSON Web Token).
 
-Nakon uspešne prijave (login-a), server generiše JWT token koji frontend čuva u `localstorage` memoriji.
+Nakon uspešne prijave (login-a), server generiše JWT token koji frontend čuva u `localStorage` memoriji.
 
 Prilikom slanja zahteva ka zaštićenim endpoint-ima, JWT token se automatski dodaje u `Authorization` header HTTP zahteva pomoću Angular HTTP interceptora.
 
 
 ## Real-time komunikacija
 
-Real-time komunikacija je realizovana korišćenjem Signal.
+Real-time komunikacija je realizovana korišćenjem SignalR.
 
 Obuhvata:
 - Slanje i prijem poruka.
