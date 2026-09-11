@@ -52,7 +52,7 @@ Funkcionalnosti:
 
 ![Dijagram Arhitekture](assets/images/WebArhitektura2.svg)
 
-## Strukutra projekta
+## Struktura projekta
 
 ```text
 Imigram/
