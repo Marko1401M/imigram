@@ -10,11 +10,13 @@ namespace ImigramAPI.Services
         private readonly ILikeRepository _likeRepository;
         private readonly IPostRepository _postRepository;
         private readonly INotificationService _notificationService;
-        public LikeService(ILikeRepository likeRepository, IPostRepository postRepository, INotificationService notificationService)
+        private readonly IUserRepository _userRepository;
+        public LikeService(ILikeRepository likeRepository, IPostRepository postRepository, INotificationService notificationService, IUserRepository userRepository)
         {
             _likeRepository = likeRepository; 
             _postRepository = postRepository;
             _notificationService = notificationService;
+            _userRepository = userRepository;
         }
         public async Task<List<Like>> GetLikes(string postId)
         {
@@ -48,8 +50,8 @@ namespace ImigramAPI.Services
             }
 
             await _postRepository.Update(post);
-
-            await _notificationService.Create(post.UserId, userId, "LIKE", "Korisnik je lajkovao Vašu objavu!", postId);
+            var user = await _userRepository.GetById(userId);
+            await _notificationService.Create(post.UserId, userId, "LIKE", $"{user.FirstName} je lajkovao Vašu objavu!", postId);
 
             return newLike;
         }

@@ -94,6 +94,8 @@ namespace ImigramAPI.Services
             var user = await _userRepository.GetById(post.UserId);
  
             bool isLiked = (await _likeRepository.GetLike(post.Id, userId)) != null;
+
+
             var postDto = new PostDto
             {
                 Id = id,
@@ -147,6 +149,7 @@ namespace ImigramAPI.Services
             foreach(var post in list) {
                 var user = await _userRepository.GetById(post.UserId);
                 bool isLiked = (await _likeRepository.GetLike(post.Id, post.UserId)) != null;
+
                 var postDto = new PostDto
                 {
                     Id = post.Id,
@@ -182,7 +185,7 @@ namespace ImigramAPI.Services
                 var user = await _userRepository.GetById(post.UserId);
                 bool isLiked = (await _likeRepository.GetLike(post.Id, userId)) != null;
                 var follow = await _followService.IsFollowing(userId, post.UserId);
-                
+
                 if (!follow) continue;
                 var postDto = new PostDto
                 {

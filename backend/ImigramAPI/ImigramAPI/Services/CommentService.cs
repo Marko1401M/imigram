@@ -34,7 +34,9 @@ namespace ImigramAPI.Services
 
             var post = await _postRepository.GetById(dto.PostId);
             var user = await _userRepository.GetById(dto.UserId);
-            await _notificationService.Create(post.UserId, dto.UserId, "Comment", $"Korisnik {user.Username} je komentarisao Vašu objavu!", post.Id, comment.Id);
+            await _notificationService.Create(post.UserId, dto.UserId, "Comment", $"{user.FirstName} je komentarisao Vašu objavu!", post.Id, comment.Id);
+            post.CommentsCount += 1;
+            await _postRepository.Update(post);
             return comment;
         }
 
