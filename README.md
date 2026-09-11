@@ -153,7 +153,7 @@ Backend api je implementiran korišćenjem ASP .NET Core Web API-ja.
 
 API koristi JWT auth za zaštićene endpoint-e.
 
-`https://localhost:7109/swagger/index.html`
+Detaljnija dokumentacija dostupna je na: `https://localhost:7109/swagger/index.html`
 
 ### Authentication
 | Method | Endpoint | Opis | Auth |
@@ -241,3 +241,63 @@ API koristi JWT auth za zaštićene endpoint-e.
 | GET   | `api/Report/get/all/{status}`| Dohvatanje svih prijava za objavu po statusu `status` | Da |
 | GET   | `api/Report/{id}`| Dohvatanje prijave `id` | Da |
 
+## Autentifikacija i autorizacija
+Za autentifikaciju korisnika koristi se JWT (JSON Web Token).
+
+Nakon uspešne prijave (login-a), server generiše JWT token koji frontend čuva u `localstorage` memoriji.
+
+Prilikom slanja zahteva ka zaštićenim endpoint-ima, JWT token se automatski dodaje u `Authorization` header HTTP zahteva pomoću Angular HTTP interceptora.
+
+
+## Real-time komunikacija
+
+Real-time komunikacija je realizovana korišćenjem Signal.
+
+Obuhvata:
+- Slanje i prijem poruka.
+- Prijem i prikaz obaveštenja.
+
+## Izgled aplikacije
+
+### Login stranica
+![Login stranica](assets/screenshots/Login.png)
+
+### Register stranica
+![Register stranica](assets/screenshots/Registration.png)
+
+### Admin Panel
+![Admin panel](assets/screenshots/admin.png)
+
+### Inbox 
+![Inbox](assets/screenshots/chat.png)
+
+### Pratioci
+![Followers](assets/screenshots/followers.png)
+
+### Pretraga
+![Search](assets/screenshots/Search.png)
+
+### Objava
+![Post](assets/screenshots/Post.png)
+
+## Testiranje
+
+Testiranje je odradjeno u seleniumu. Nisam stigao da testiram baš sve funkcionalnosti, već samo one glavne. Ostale funkcionalnosti su testirane ručno i rade.
+
+### Testovi
+| Tip  | Naziv     | Opis |
+|--------|----------|---------|
+|Register| `ValidRegistration`| Registracija korisnika sa validnim kredencijalima  |
+|Register| `InvalidUsernameRegistration`| Registracija korisnika sa nedozvoljenim korisničkim imenom|
+|Register| `InvalidEmailRegistration`| Registracija korisnika sa nedozvoljenom email adresom|
+|Register| `PasswordDontMatchRegistration`| Registracija korisnika sa nepodudarajućim šiframa|
+|Register| `UsernameTakenRegistration`| Registracija korisnika sa zauzetim korisničkim imenom|
+|Register| `EmailTakenRegistration`| Registracija korisnika sa zauzetom email adresom|
+|Login| `LoginWithValidCredentials`| Prijava korisnika sa validnim kredencijalima  |
+|Login| `LoginWithInvalidUsername`| Prijava korisnika sa nepostojećim korisničkim imenom  |
+|Login| `LoginWithInvalidPassword`| Prijava korisnika sa pogrešnom šifrom  |
+|Login| `LoginWithInvalidUsernameAndPassword`| Prijava korisnika sa pogrešnim korisničkim imenom i pogrešnom šifrom  |
+|Search| `ValidSearch`| Pretraga korisnika po korisničkom imenu i običnom imenu |
+|CreatePost| `CreatePost`| Kreiranje nove objave |
+|PostDetails| `LikePost`| Lajkovanje objave |
+|PostDetails| `CommentPost`| Komentarisanje objave |
